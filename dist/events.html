@@ -20,12 +20,14 @@
         <li class="nav__item"><a class="nav__link" href="/m7/menu.html">Menü</a></li>
       </ul>
     </nav>
-    <nav class="header__lang-switcher lang-switcher"><span class="lang-switcher__current">De
+    <nav class="header__lang-switcher lang-switcher">
+      <button class="lang-switcher__current" type="button">De
         <svg width="16" height="16">
           <use xlink:href="sprite.svg#arrow_sprite"> </use>
-        </svg></span>
+        </svg>
+      </button>
       <ul class="lang-switcher__list"> 
-        <li class="lang-switcher__item"> <a class="lang-switcher__link" rel="alternate" href="/de" hrefLang="de">De</a></li>
+        <li class="lang-switcher__item lang-switcher__item--selected"><a class="lang-switcher__link" rel="alternate" href="/de" hrefLang="de">De</a></li>
         <li class="lang-switcher__item"> <a class="lang-switcher__link" rel="alternate" href="/ru" hrefLang="ru">Ru</a></li>
       </ul>
     </nav>
@@ -39,11 +41,10 @@
     <div class="hero__content container"> 
       <div class="hero__text">
         <h1 class="hero__title">Veranstaltungen zu jedem Anlass</h1>
-      </div>
-      <button class="hero__video-btn btn btn--empty" type="button"><span class="btn__inner">Video ansehen
+      </div><a class="hero__video-btn btn btn--empty" data-glightbox href="https://static.videezy.com/system/resources/previews/000/019/287/original/Kanada.mp4" role="button"><span class="btn__inner">Video ansehen
           <svg width="22" height="22">
             <use xlink:href="sprite.svg#play_sprite"> </use>
-          </svg></span></button>
+          </svg></span></a>
     </div>
   </div>
 </section>
@@ -523,7 +524,7 @@
       <picture class="panorama__image"><img src="assets/images/panorama.jpg" alt=""></picture>
       <div class="panorama__text">
         <h3 class="panorama__title">360°-Panorama</h3>
-        <p class="panorama__desc">Wir laden Sie herzlich auf einen virtuellen 360 Grad Rundgang durch unsere Räumlichkeiten ein.</p><a class="panorama__btn glightbox" href="https://my.matterport.com/show/?m=1Q9GaHT7xvZ" role="button">
+        <p class="panorama__desc">Wir laden Sie herzlich auf einen virtuellen 360 Grad Rundgang durch unsere Räumlichkeiten ein.</p><a class="panorama__btn" data-glightbox data-gallery="1" href="https://my.matterport.com/show/?m=1Q9GaHT7xvZ" role="button">
           <svg width="24" height="28">
             <use xlink:href="sprite.svg#panorama_sprite"> </use>
           </svg></a>
