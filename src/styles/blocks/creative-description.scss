@@ -1,0 +1,24 @@
+@use '../utils/mixins' as *;
+
+.creative-description {
+  @include media(md) {
+    font-size: rem(32px);
+    line-height: 120%;
+  }
+
+  font-family: var(--font-secondary);
+  font-size: rem(72px);
+  line-height: 84px;
+
+  img {
+    @include media(md) {
+      width: 35px;
+      height: 35px;
+    }
+
+    width: 80px;
+    height: 80px;
+    margin: 0 0.5rem;
+    margin-bottom: -12px;
+  }
+}

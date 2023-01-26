@@ -1,0 +1,28 @@
+@use '../utils/mixins' as *;
+
+.feedback-block {
+  @include media(lg) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__title {
+    @include media(md) {
+      font-size: rem(32px);
+    }
+
+    font-family: var(--font-secondary);
+    font-size: rem(48px);
+  }
+
+  &__manager {
+    @include media(md) {
+      margin-top: 32px;
+    }
+
+    margin-top: 48px;
+  }
+}

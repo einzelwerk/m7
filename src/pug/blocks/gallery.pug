@@ -1,0 +1,50 @@
+section.section.section--l.section--white-bg
+  .container
+    .creative-description 
+      p In unseren gemütlichen
+        img(src=require('@/images/c1.svg'), alt="")
+        |und gepflegten Räumlichkeiten können Sie ausgelassen, entspannt
+        img(src=require('@/images/c2.svg'), alt="")
+        | oder schick, aber auf jeden Fall mit viel Spaß beisammen sein.
+    .gallery-slider
+      .gallery-slider__wrapper.gallery-slider__wrapper-primary
+        .gallery-slider__primary.gallery-primary.swiper 
+          .swiper-wrapper 
+            .gallery-primary__item.swiper-slide 
+              picture.gallery-primary__image 
+                img(src=require('@/images/gallery/primary/1.jpg'), alt="")
+            .gallery-primary__item.swiper-slide 
+              picture.gallery-primary__image 
+                img(src=require('@/images/gallery/primary/1.jpg'), alt="")
+            .gallery-primary__item.swiper-slide 
+              picture.gallery-primary__image 
+                img(src=require('@/images/gallery/primary/1.jpg'), alt="")
+      .gallery-slider__wrapper
+        .gallery-slider__secondary.gallery-secondary.swiper 
+          .swiper-wrapper 
+            .gallery-secondary__item.swiper-slide 
+              picture.gallery-secondary__image 
+                img(src=require('@/images/gallery/secondary/1.jpg'), alt="")
+            .gallery-secondary__item.swiper-slide 
+              picture.gallery-secondary__image 
+                img(src=require('@/images/gallery/secondary/1.jpg'), alt="")
+            .gallery-secondary__item.swiper-slide 
+              picture.gallery-secondary__image 
+                img(src=require('@/images/gallery/secondary/1.jpg'), alt="")
+          .gallery-secondary__pagination.slider-pagination
+          .gallery-secondary__bottom
+            .gallery-secondary__counter.slider-counter 
+              span.slider-counter__current 01
+              span.slider-counter__length /10
+            .gallery-secondary__title.swiper 
+              .swiper-wrapper 
+                .swiper-slide Große Halle
+                .swiper-slide Große Halle 2
+                .swiper-slide Große Halle 3
+            .gallery-secondary__nav.slider-navigation 
+              button.slider-navigation__item.slider-navigation__item--prev.gallery-slider-nav-prev
+                svg(width="8" height="15")
+                  use(xlink:href="sprite.svg#arrow_l_sprite") 
+              button.slider-navigation__item.slider-navigation__item--next.gallery-slider-nav-next
+                svg(width="8" height="15")
+                  use(xlink:href="sprite.svg#arrow_r_sprite") 

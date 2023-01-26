@@ -1,0 +1,22 @@
+@use '../utils/mixins' as *;
+
+.button-group {
+  @include media(md) {
+    gap: 8px;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  &__item {
+    @include media(md) {
+      padding: 10px 38px;
+      font-size: rem(18px);
+    }
+
+    padding: 24px 40px;
+    font-size: rem(20px);
+    border-radius: 12px;
+  }
+}

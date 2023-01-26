@@ -1,0 +1,33 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.header {
+  position: absolute;
+  z-index: 1010;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 27px 0;
+
+  color: var(--white);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    margin-right: auto;
+    margin-left: 60px;
+  }
+
+  &__lang-switcher {
+    margin-right: 12px;
+  }
+
+  &__btn {
+    font-size: rem(18px);
+  }
+}

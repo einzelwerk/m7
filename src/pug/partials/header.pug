@@ -1,0 +1,21 @@
+header.header 
+  .header__inner.container 
+    .header__logo.logo 
+      a.logo__link(href="") 
+        img.logo__image(src=require('@/images/logo.svg'), alt="")
+    nav.header__nav.nav 
+      ul.nav__list 
+        each val,index in menu 
+          li.nav__item(class=index === 0 ? 'nav__item--current' : '')
+            a.nav__link(href=val.link)= val.name
+    nav.header__lang-switcher.lang-switcher.hidden-mobile
+      button.lang-switcher__current(type="button") De
+        svg(width="16" height="16")
+          use(xlink:href="sprite.svg#arrow_sprite") 
+      ul.lang-switcher__list 
+        li.lang-switcher__item.lang-switcher__item--selected
+          a.lang-switcher__link(rel="alternate" href="/de" hrefLang="de") De
+        li.lang-switcher__item 
+          a.lang-switcher__link(rel="alternate" href="/ru" hrefLang="ru") Ru
+    button.header__btn.btn.btn--primary(type="button")
+      span.btn__inner Eventanfrage

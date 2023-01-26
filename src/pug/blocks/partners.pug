@@ -1,0 +1,18 @@
+section.section.section--white-bg
+  .container
+    -locals.sectionTitle = 'Unsere Partner'
+    include ../blocks/section-heading
+    .partners.swiper 
+      .partners.swiper-wrapper 
+        .partners__item.swiper-slide 
+          picture.partners__logo
+            img(src=require('@/images/partners/1.svg'), alt="")
+        .partners__item.swiper-slide 
+          picture.partners__logo
+            img(src=require('@/images/partners/1.svg'), alt="")
+        .partners__item.swiper-slide 
+          picture.partners__logo
+            img(src=require('@/images/partners/1.svg'), alt="")
+        .partners__item.swiper-slide 
+          picture.partners__logo
+            img(src=require('@/images/partners/1.svg'), alt="")

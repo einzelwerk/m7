@@ -1,0 +1,29 @@
+section.section.section--black-bg 
+  .container
+    - locals.sectionTitle = 'Unsere Räumlichkeiten'
+    include ../blocks/section-heading
+  .services.swiper.container
+    .services-wrapper.swiper-wrapper
+      - var services = [1,2,3,4,5,6]
+        each val,index in services
+          .swiper-slide
+            .services__item
+              picture.services__image
+                img(src=require('@/images/services/1.jpg'), alt="")
+              .services__content 
+                .services__count.slider-counter 
+                  span.slider-counter__current= '0' + (index + 1)
+                  span.slider-counter__length= '/0' + services.length
+                h3.services__title Kegel
+                .services__capacity
+                  svg(width="18" height="18")
+                    use(xlink:href="sprite.svg#user_sprite") 
+                  span 50 Personen
+                .services__list.services-list 
+                  h4.services-list__title Unser Service für Sie
+                  ul.services-list__list 
+                    li.services-list__item Individuelle Dekoration
+                    li.services-list__item Service Nr. 2
+                    li.services-list__item Service Nr. 2
+              button.services__btn.btn.btn--primary 
+                span.btn__inner Event anfragen

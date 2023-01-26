@@ -1,0 +1,21 @@
+section.section.section--white-bg 
+  .container 
+    -locals.sectionTitle = 'Videogalerie'
+    include ../blocks/section-heading
+    .video-gallery
+      .video-main-wrapper 
+        .video-gallery__main.video-main.swiper 
+          .swiper-wrapper
+            each val in [1,2,3,4,5,1,2,3,4,5]
+              .video-main__item.swiper-slide.js-play-video
+                button.video-main__play.btn.btn--empty(type="button" aria-label="Play video")
+                  span.btn__inner Video ansehen
+                    svg(width="22" height="22")
+                      use(xlink:href="sprite.svg#play_sprite") 
+                video.video-main__media(src='https://static.videezy.com/system/resources/previews/000/019/287/original/Kanada.mp4' poster=require(`@/images/video-placeholder/${val}.jpg`)) 
+      .video-gallery__thumbs.video-thumbs.swiper 
+        .swiper-wrapper 
+          each val,index in [1,2,3,4,5,1,2,3,4,5]
+            .swiper-slide.video-thumbs__item 
+              picture.video-thumbs__image 
+                img(src=require(`@/images/video-placeholder/${val}.jpg`), alt="")

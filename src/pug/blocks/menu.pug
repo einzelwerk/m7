@@ -1,0 +1,32 @@
+section.section.section--white-bg
+  .container 
+    - locals.sectionTitle = 'Unsere Speisen'
+    - locals.sectionDesc = 'Probieren Sie die levantische Küche mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen – für jeden Anlass ein perfektes Essen!'
+    include ../blocks/section-heading
+    aside.guest-options 
+      .guest-options__item 
+        .guest-options__text 
+          h4.guest-options__title bis 20 Personen
+          p.guest-options__desc 3-Gänge-Menüs (ab 30,-€ pro Person) beinhaltet eine kalte oder warme Vorspeise, zwei Hauptgänge zur Auswahl mit Gemüse, Beilage und ein Dessert.
+        .guest-options__image 
+          img(src=require('@/images/guests/1.svg'), alt="")
+      .guest-options__item 
+        .guest-options__text 
+          h4.guest-options__title Ab 20 Personen
+          p.guest-options__desc Wir bieten Hauptspeisen und Desserts als Büffet an
+        .guest-options__image 
+          img(src=require('@/images/guests/2.svg'), alt="")
+  .menu.swiper.container 
+    .menu-wrapper.swiper-wrapper
+      each val,index in [1,2,3,4,5]
+        .menu__item.swiper-slide 
+          picture.menu__image 
+            img(src=require(`@/images/menu/${val}.jpg`), alt="")
+          .menu__heading 
+            h5.menu__name Baku kumpir
+            span.menu__price €25.00
+  .container.button-group 
+    a.button-group__item.btn.btn--border(href="") 
+      span.btn__inner Speisekarte
+    button.button-group__item.btn.btn--secondary(type="button") 
+      span.btn__inner Eventanfrage

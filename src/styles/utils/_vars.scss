@@ -1,0 +1,41 @@
+@use './mixins' as *;
+
+:root {
+  --container: 1920px;
+  --gap: 30px;
+  --gap-y: 60px;
+  --gap-y-l: 100px;
+  --gap-y-xl: 120px;
+  --font-secondary: 'DegularDisplay';
+  @each $breakpoint, $val in $breakpoints {
+    @include media($breakpoint) {
+      @if $val == 1440px {
+        --container: 1350px;
+      } @else {
+        @if $val == 1920px {
+          --container: 1720px;
+        } @else {
+          @include media($breakpoint) {
+            --container: #{$val};
+          }
+        }
+      }
+    }
+  }
+  @include media(lg) {
+    --gap: 16px;
+    --gap-y: 60px;
+    --small-gap-y: 40px;
+  }
+}
+
+:root {
+  --gold-accent: #ecac61;
+  --red-accent: #e24d4d;
+  --white-40: #fff6;
+  --white: #fff;
+  --background-secondary: #181a26;
+  --background-dark: #101010;
+  --text-color: #212121;
+  --gray-color: #84848b;
+}

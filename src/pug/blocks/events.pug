@@ -1,0 +1,30 @@
+section.section.section--white-bg 
+  .container 
+    -locals.sectionTitle = 'Bevorstehende Events'
+    -locals.sectionDesc = false 
+    include ../blocks/section-heading
+    .events.swiper
+      .events__nav.slider-navigation 
+        button.slider-navigation__item.slider-navigation__item--prev
+          svg(width="8" height="15")
+            use(xlink:href="sprite.svg#arrow_l_sprite") 
+        button.slider-navigation__item.slider-navigation__item--next
+          svg(width="8" height="15")
+            use(xlink:href="sprite.svg#arrow_r_sprite") 
+      .events-wrapper.swiper-wrapper
+        - var events = ['var(--red-accent)','green','lightblue','pink']
+        each val,index in events
+          .events__item.swiper-slide(style=`--events-color:${val}`)
+            .events__content
+              .events__counter.slider-counter
+                span.slider-counter__current= '0' + (index + 1)
+                span.slider-counter__length= '/0' + events.length
+              h3.events__title= 'Open Mic ' + index
+              time.events__date(datetime="2022-11-25") 25. November 2022
+              button.events__btn.btn.btn--primary(data-modal="main-modal")
+                span.btn__inner Anfrage absenden
+            picture.events__image
+              source(media="(max-width:768px)", srcset=require('@/images/events/1-m.svg'))
+              img(src=require('@/images/events/1.svg'), alt="")
+
+

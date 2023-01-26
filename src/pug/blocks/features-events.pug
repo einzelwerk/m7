@@ -1,0 +1,9 @@
+section.section.section--black-bg 
+  .container 
+    .features-events.swiper 
+      .swiper-wrapper
+        each val,index in ['3 Hallen', 'Das Beste aus dem Orient und Okzident', 'Kegelbahn', 'Komplette Organisation Ihrer Veranstaltung']
+          .features-events__item.swiper-slide
+            picture.features-events__image
+              img(src=require(`@/images/features-events/${index + 1}.svg`), alt="")
+            h3.features-events__title= val

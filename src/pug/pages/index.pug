@@ -1,0 +1,17 @@
+
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Kegel. Gourmet. Bar'
+  - locals.heroDesc = 'Möckernstraße 7 - 30163 Hannover'
+  - locals.heroImage = require('@/images/hero/home.jpg')
+  include ../blocks/hero
+  include ../blocks/features
+  include ../blocks/services
+  include ../blocks/panorama
+  include ../blocks/slider-block
+  include ../blocks/menu
+  include ../blocks/events
+  include ../blocks/presentation-block
+  include ../blocks/partners
+  include ../blocks/feedback-block

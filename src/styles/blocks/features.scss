@@ -1,0 +1,59 @@
+@use '../utils/mixins' as *;
+
+.features {
+  @include media(lg) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+
+  &__desc {
+    @include media(md) {
+      font-size: rem(24px);
+    }
+
+    font-family: var(--font-secondary);
+    font-size: rem(32px);
+    line-height: 125%;
+  }
+}
+
+.features-grid {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    font-family: var(--font-secondary);
+
+    border: 1px solid var(--white-40);
+    border-radius: 12px;
+  }
+
+  &__number {
+    @include media(md) {
+      font-size: rem(48px);
+    }
+
+    font-size: rem(60px);
+  }
+
+  &__title {
+    margin-top: 105px;
+    font-size: rem(20px);
+  }
+}
