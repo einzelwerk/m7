@@ -20,7 +20,7 @@
         <li class="nav__item"><a class="nav__link" href="/m7/menu.html">Menü</a></li>
       </ul>
     </nav>
-    <nav class="header__lang-switcher lang-switcher">
+    <nav class="header__lang-switcher lang-switcher hidden-mobile">
       <button class="lang-switcher__current" type="button">De
         <svg width="16" height="16">
           <use xlink:href="sprite.svg#arrow_sprite"> </use>
@@ -223,6 +223,76 @@
     </div>
   </div>
 </section>
+<section class="section container"> 
+  <div class="slider-block"> 
+    <div class="slider-block__text"> 
+      <h2 class="slider-block__title">Events</h2>
+      <p class="slider-block__desc">Probieren Sie die levantische Küche mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen – für jeden Anlass ein perfektes Essen!</p>
+      <button class="slider-block__btn btn btn--secondary" type="button">Event anfragen</button>
+    </div>
+    <div class="slider-block__slider">
+      <div class="default-slider swiper"> 
+        <div class="swiper-wrapper">
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">01</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">02</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">03</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">04</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">05</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">06</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__pagination slider-pagination hidden-desktop"></div>
+          <div class="default-slider__nav slider-navigation"> 
+            <button class="slider-navigation__item slider-navigation__item--prev">
+              <svg width="8" height="15">
+                <use xlink:href="sprite.svg#arrow_l_sprite"> </use>
+              </svg>
+            </button>
+            <button class="slider-navigation__item slider-navigation__item--next">
+              <svg width="8" height="15">
+                <use xlink:href="sprite.svg#arrow_r_sprite"> </use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section section--white-bg">
   <div class="container"> 
 <div class="section-heading">
@@ -310,7 +380,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:green">
           <div class="events__content">
@@ -319,7 +391,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:lightblue">
           <div class="events__content">
@@ -328,7 +402,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:pink">
           <div class="events__content">
@@ -337,7 +413,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
       </div>
     </div>

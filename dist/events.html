@@ -20,7 +20,7 @@
         <li class="nav__item"><a class="nav__link" href="/m7/menu.html">Menü</a></li>
       </ul>
     </nav>
-    <nav class="header__lang-switcher lang-switcher">
+    <nav class="header__lang-switcher lang-switcher hidden-mobile">
       <button class="lang-switcher__current" type="button">De
         <svg width="16" height="16">
           <use xlink:href="sprite.svg#arrow_sprite"> </use>
@@ -50,22 +50,24 @@
 </section>
 <section class="section section--black-bg"> 
   <div class="container"> 
-    <div class="features-events">
-      <div class="features-events__item"> 
-        <picture class="features-events__image"><img src="assets/images/features-events/1.svg" alt=""></picture>
-        <h3 class="features-events__title">3 Hallen</h3>
-      </div>
-      <div class="features-events__item"> 
-        <picture class="features-events__image"><img src="assets/images/features-events/2.svg" alt=""></picture>
-        <h3 class="features-events__title">Das Beste aus dem Orient und Okzident</h3>
-      </div>
-      <div class="features-events__item"> 
-        <picture class="features-events__image"><img src="assets/images/features-events/3.svg" alt=""></picture>
-        <h3 class="features-events__title">Kegelbahn</h3>
-      </div>
-      <div class="features-events__item"> 
-        <picture class="features-events__image"><img src="assets/images/features-events/4.svg" alt=""></picture>
-        <h3 class="features-events__title">Komplette Organisation Ihrer Veranstaltung</h3>
+    <div class="features-events swiper"> 
+      <div class="swiper-wrapper">
+        <div class="features-events__item swiper-slide">
+          <picture class="features-events__image"><img src="assets/images/features-events/1.svg" alt=""></picture>
+          <h3 class="features-events__title">3 Hallen</h3>
+        </div>
+        <div class="features-events__item swiper-slide">
+          <picture class="features-events__image"><img src="assets/images/features-events/2.svg" alt=""></picture>
+          <h3 class="features-events__title">Das Beste aus dem Orient und Okzident</h3>
+        </div>
+        <div class="features-events__item swiper-slide">
+          <picture class="features-events__image"><img src="assets/images/features-events/3.svg" alt=""></picture>
+          <h3 class="features-events__title">Kegelbahn</h3>
+        </div>
+        <div class="features-events__item swiper-slide">
+          <picture class="features-events__image"><img src="assets/images/features-events/4.svg" alt=""></picture>
+          <h3 class="features-events__title">Komplette Organisation Ihrer Veranstaltung</h3>
+        </div>
       </div>
     </div>
   </div>
@@ -225,7 +227,7 @@
       <p>In unseren gemütlichen<img src="assets/images/c1.svg" alt="">und gepflegten Räumlichkeiten können Sie ausgelassen, entspannt<img src="assets/images/c2.svg" alt="">oder schick, aber auf jeden Fall mit viel Spaß beisammen sein.</p>
     </div>
     <div class="gallery-slider">
-      <div class="gallery-slider__wrapper"> 
+      <div class="gallery-slider__wrapper gallery-slider__wrapper-primary">
         <div class="gallery-slider__primary gallery-primary swiper"> 
           <div class="swiper-wrapper"> 
             <div class="gallery-primary__item swiper-slide"> 
@@ -253,6 +255,7 @@
               <picture class="gallery-secondary__image"> <img src="assets/images/gallery/secondary/1.jpg" alt=""></picture>
             </div>
           </div>
+          <div class="gallery-secondary__pagination slider-pagination"></div>
           <div class="gallery-secondary__bottom">
             <div class="gallery-secondary__counter slider-counter"> <span class="slider-counter__current">01</span><span class="slider-counter__length">/10</span></div>
             <div class="gallery-secondary__title swiper"> 
@@ -558,7 +561,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:green">
           <div class="events__content">
@@ -567,7 +572,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:lightblue">
           <div class="events__content">
@@ -576,7 +583,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
         <div class="events__item swiper-slide" style="--events-color:pink">
           <div class="events__content">
@@ -585,7 +594,9 @@
             <time class="events__date" datetime="2022-11-25">25. November 2022</time>
             <button class="events__btn btn btn--primary" data-modal="main-modal"><span class="btn__inner">Anfrage absenden</span></button>
           </div>
-          <picture class="events__image"><img src="assets/images/events/1.svg" alt=""></picture>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
         </div>
       </div>
     </div>
