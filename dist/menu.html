@@ -35,8 +35,44 @@
       </ul>
     </nav>
     <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
+    <button class="header__menu-btn hidden-desktop js-open-nav" type="button">Menu</button>
   </div>
 </header>
+<div class="mobile-nav-wrapper" id="nav" aria-hidden="true">
+  <div class="mobile-nav-wrapper__header header">
+    <div class="header__inner container">
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__image" src="assets/images/logo.svg" alt=""></a></div>
+      <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
+      <button class="header__menu-btn mobile-nav-wrapper__close" type="button">Close</button>
+    </div>
+  </div>
+  <nav class="mobile-nav hidden-desktop container">
+    <ul class="mobile-nav__list"> 
+      <li class="mobile-nav__item mobile-nav__item--current"><a class="mobile-nav__link" href="/m7">Home</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/events.html">Events</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/bar.html">Bar</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/kegel.html">Kegel</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/gallery.html">Galerie</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/menu.html">Menü</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/career.html">Karrier</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/menu.html">Menü</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/contacts.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-nav-wrapper__footer container"> 
+    <nav class="header__lang-switcher lang-switcher lang-switcher--to-top">
+      <button class="lang-switcher__current" type="button">De
+        <svg width="16" height="16">
+          <use xlink:href="sprite.svg#arrow_sprite"> </use>
+        </svg>
+      </button>
+      <ul class="lang-switcher__list"> 
+        <li class="lang-switcher__item lang-switcher__item--selected"><a class="lang-switcher__link" rel="alternate" href="/de" hrefLang="de">De</a></li>
+        <li class="lang-switcher__item"> <a class="lang-switcher__link" rel="alternate" href="/ru" hrefLang="ru">Ru</a></li>
+      </ul>
+    </nav><a class="mobile-nav__link" href="tel:0176 1 222 33 77">0176 1 222 33 77</a>
+  </div>
+</div>
     <main class="main">
 <section class="section-hero"> 
   <div class="hero">
