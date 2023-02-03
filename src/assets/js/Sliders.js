@@ -65,6 +65,26 @@ class Sliders {
     sliderInstance.init();
   }
 
+  static featuresBarSlider() {
+    const root = document.querySelector('.features-bar');
+    const sliderInstance = new Swiper(root, {
+      init: false,
+      slidesPerView: 1.8,
+      spaceBetween: 16,
+      breakpoints: {
+        768: {
+          slidesPerView: 3.05,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    sliderInstance.init();
+  }
+
   static eventsSlider() {
     const root = document.querySelector('.events');
     const sliderInstance = new Swiper(root, {
@@ -138,6 +158,44 @@ class Sliders {
     sliderInstance.init();
   }
 
+  static drinksMenuSlider() {
+    const root = document.querySelector('.drinks-menu');
+    const sliderInstance = new Swiper(root, {
+      init: false,
+      slidesPerView: 1.05,
+      spaceBetween: 16,
+      speed: 1200,
+      breakpoints: {
+        1024: {
+          spaceBetween: 20,
+          slidesPerView: 2.5,
+        },
+      },
+    });
+
+    sliderInstance.init();
+  }
+
+  static menuCategorySlider() {
+    const root1 = document.querySelectorAll('.js-menu-category-slider');
+    root1.forEach((root) => {
+      const sliderInstance = new Swiper(root, {
+        init: false,
+        slidesPerView: 1.05,
+        spaceBetween: 16,
+        speed: 1200,
+        breakpoints: {
+          1024: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      sliderInstance.init();
+    });
+  }
+
   static galleryPrimarySlider() {
     const sliderPrimary = new Swiper('.gallery-primary', {
       modules: [Navigation],
@@ -167,7 +225,7 @@ class Sliders {
         disabledClass: 'slider-navigation__item--disabled',
       },
       pagination: {
-        el: document.querySelector('.gallery-secondary').querySelector('.slider-pagination'),
+        el: document.querySelector('.gallery-secondary')?.querySelector('.slider-pagination'),
         bulletClass: 'slider-pagination__item',
         bulletActiveClass: 'slider-pagination__item--active',
       },
@@ -248,4 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Sliders.galleryPrimarySlider();
   Sliders.videoSlider();
   Sliders.defaultSlider();
+  Sliders.featuresBarSlider();
+  Sliders.drinksMenuSlider();
+  Sliders.menuCategorySlider();
 });

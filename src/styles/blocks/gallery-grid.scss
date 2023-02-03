@@ -1,0 +1,247 @@
+@use '../utils/mixins' as *;
+
+.gallery-grid {
+  @include media(md) {
+    gap: 16px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  &__number {
+    font-size: rem(60px);
+  }
+
+  &__title {
+    font-size: rem(24px);
+    font-weight: 500;
+  }
+
+  &__item {
+    @include media(md) {
+      grid-column: span 12;
+    }
+
+    overflow: hidden;
+    grid-column: span 4;
+    border-radius: 16px;
+
+    &--text {
+      @include media(md) {
+        grid-column: span 6;
+      }
+
+      display: flex;
+      grid-column: span 2;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 24px 30px;
+
+      font-family: var(--font-secondary);
+
+      background: var(--gallery-grid-color);
+    }
+
+    &:nth-child(1) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+
+      grid-row: span 2;
+    }
+
+    &:nth-child(2) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+
+      grid-column: span 8;
+      grid-row: span 2;
+    }
+
+    &:nth-child(6) {
+      @include media(md) {
+        grid-column: span 12;
+      }
+
+      grid-column: span 8;
+      grid-row: span 2;
+    }
+
+    &:nth-child(13),
+    &:nth-child(14) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+
+      grid-column: span 4;
+    }
+
+    &:nth-child(15) {
+      @include media(md) {
+        grid-column: span 12;
+        grid-row: auto;
+      }
+
+      grid-column: 5 / span 8;
+      grid-row: 7 / span 2;
+    }
+
+    &:nth-child(18) {
+      @include media(md) {
+        grid-column: span 12;
+        grid-row: auto;
+      }
+
+      grid-column: 5 / span 8;
+      grid-row: 9 / span 2;
+    }
+
+    &:nth-child(22) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+
+      grid-column: span 8;
+    }
+
+    &:nth-child(23) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+    }
+
+    &:nth-child(31) {
+      @include media(md) {
+        grid-column: span 12;
+        grid-row: auto;
+      }
+
+      grid-column: 5 / span 8;
+      grid-row: 15 / span 2;
+    }
+
+    &:nth-child(26),
+    &:nth-child(27) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+    }
+
+    &:nth-child(28) {
+      @include media(md) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+    }
+
+    &:nth-child(29) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+    }
+
+    &:nth-child(30) {
+      @include media(md) {
+        grid-column: span 6;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.gallery-founder {
+  @include media(md) {
+    flex-direction: column;
+  }
+  @include media(md) {
+    padding: 16px;
+  }
+
+  display: flex;
+  padding: 20px;
+  background: var(--light-card);
+
+  &__desc {
+    @include media(xxl, min-width) {
+      font-size: rem(36px);
+    }
+
+    @include media(md) {
+      font-size: 18px;
+    }
+
+    font-family: var(--font-secondary);
+    font-size: rem(24px);
+    line-height: 133%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include media(md) {
+      font-size: rem(18px);
+    }
+
+    margin-bottom: 4px;
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 133%;
+  }
+
+  &__position {
+    @include media(md) {
+      font-size: rem(14px);
+    }
+  }
+
+  &__about {
+    @include media(md) {
+      margin-top: 16px;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__col {
+    &--text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--image {
+      @include media(md) {
+        width: 100%;
+        margin-top: 24px;
+        margin-left: 0;
+      }
+
+      overflow: hidden;
+      width: 45%;
+      margin-left: 47px;
+      border-radius: 16px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

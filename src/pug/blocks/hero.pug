@@ -7,7 +7,8 @@ section.section-hero
         h1.hero__title= heroTitle
         if heroDesc 
           p.hero__desc= heroDesc
-      a.hero__video-btn.btn.btn--empty( data-glightbox href="https://static.videezy.com/system/resources/previews/000/019/287/original/Kanada.mp4" role="button")
-        span.btn__inner Video ansehen
-          svg(width="22" height="22")
-            use(xlink:href="sprite.svg#play_sprite") 
+      if heroVideo
+        a.hero__video-btn.btn.btn--empty( data-glightbox href="https://static.videezy.com/system/resources/previews/000/019/287/original/Kanada.mp4" role="button")
+          span.btn__inner Video ansehen
+            svg(width="22" height="22")
+              use(xlink:href="sprite.svg#play_sprite") 

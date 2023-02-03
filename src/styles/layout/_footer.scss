@@ -24,8 +24,31 @@
     line-height: 150%;
 
     &--link {
+      position: relative;
+
+      &::before {
+        pointer-events: none;
+        content: '';
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: scale3d(0, 1, 1);
+        transform-origin: 100% 50%;
+
+        width: 100%;
+        height: 1px;
+
+        background: currentcolor;
+
+        transition: transform 0.3s;
+      }
+
       &:hover {
-        text-decoration: underline;
+        &::before {
+          transform: scale3d(1, 1, 1);
+          transform-origin: 0% 50%;
+        }
       }
     }
   }

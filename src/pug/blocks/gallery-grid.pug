@@ -1,0 +1,23 @@
+section.section.container 
+  .gallery-grid
+    each val,index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,25,26,27,28,29,30,31]
+      if val === 8
+        .gallery-grid__item.gallery-grid__item--text(style="--gallery-grid-color:#ECAC61;") 
+          span.gallery-grid__number 80
+          span.gallery-grid__title Sitzplätzen
+        .gallery-grid__item.gallery-grid__item--text(style="--gallery-grid-color:#E5E6ED;") 
+          span.gallery-grid__number 3
+          span.gallery-grid__title Hallen
+      if  val === 13
+        .gallery-grid__item.gallery-grid__item--founder.gallery-founder
+          .gallery-founder__col.gallery-founder__col--text 
+            p.gallery-founder__desc «Die M7 Kegelbahn ist norddeutschlandweit die einzige Schwarzlicht-Kegelbahn und somit der ideale Treffpunkt für sportliches Vergnügen in fröhlicher Gesellschaft. Probier dein Glück und lass dich gleichzeitig von uns kulinarisch verwöhnen.»
+            .gallery-founder__about 
+              span.gallery-founder__name Alex Pitchfort
+              span.gallery-founder__position Director of M7
+          picture.gallery-founder__col.gallery-founder__col--image 
+            img(src=require(`@/images/gallery-grid/${val}.jpg`), alt="")
+      else                        
+        .gallery-grid__item 
+          picture.gallery-grid__image 
+            img(src=require(`@/images/gallery-grid/${val}.jpg`), alt="")    

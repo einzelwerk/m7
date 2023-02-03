@@ -8,12 +8,14 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 60px;
 
   &__title {
     @include media(md) {
       font-size: rem(32px);
     }
 
+    max-width: 540px;
     font-family: var(--font-secondary);
     font-size: rem(48px);
   }
@@ -24,5 +26,11 @@
     }
 
     margin-top: 48px;
+  }
+
+  &__desc {
+    max-width: 480px;
+    margin-top: 24px;
+    font-size: rem(20px);
   }
 }

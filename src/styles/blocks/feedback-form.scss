@@ -1,13 +1,84 @@
 @use '../utils/mixins' as *;
 
-.feedback-section {
-  padding: var(--gap-y-l) 0;
-  color: var(--white);
-  background: var(--background-secondary);
+.checkbox {
+  cursor: pointer;
+  display: flex;
+
+  &__fake {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    padding: 2px;
+
+    border: 1px solid var(--border-color);
+  }
+
+  &__input {
+    &:focus {
+      ~ .checkbox__fake {
+        outline: 1px solid rgb(52 240 52);
+      }
+    }
+
+    &:checked {
+      ~ .checkbox__fake {
+        background: url(../assets/images/check.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 400px;
+  }
+
+  &__desc {
+    font-size: rem(14px);
+    line-height: 140%;
+    color: var(--gray-color);
+  }
+
+  &__link {
+    color: var(--white);
+    text-decoration: underline;
+  }
 }
 
 .feedback-form {
   --form-gap: 16px;
+
+  &__submit {
+    @include media(md) {
+      margin-top: 32px;
+    }
+
+    width: 100%;
+    margin-top: 40px;
+    padding: 17px;
+
+    font-size: rem(20px);
+    font-weight: 500;
+    line-height: 150%;
+
+    border-radius: 12px;
+  }
+
+  &--light {
+    --border-color: rgb(33 33 33 / 20%);
+
+    .feedback-form__submit {
+      color: var(--white);
+      background: var(--background-dark);
+    }
+
+    .checkbox__link {
+      color: #84848b;
+    }
+  }
 
   &__grid {
     @include media(md) {
@@ -42,7 +113,11 @@
     position: relative;
     grid-column: span 4;
     padding: var(--form-gap) 0;
-    border-bottom: 1px solid rgb(255 255 255 / 12%);
+    border-bottom: 1px solid var(--border-color);
+
+    &--validate-err {
+      --border-color: red;
+    }
   }
 
   &__label {
@@ -72,73 +147,105 @@
         font-size: rem(10px);
       }
     }
-  }
 
-  &__submit {
-    @include media(md) {
-      margin-top: 32px;
+    &--file {
+      position: absolute;
+
+      overflow: hidden;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+
+      white-space: nowrap;
+
+      clip: rect(0 0 0 0);
+      clip-path: inset(100%);
+      border: 0;
     }
 
-    width: 100%;
-    margin-top: 40px;
-    padding: 17px;
+    &:not(:placeholder-shown),
+    &:focus {
+      outline: none;
 
-    font-size: rem(20px);
-    font-weight: 500;
-    line-height: 150%;
-
-    border-radius: 12px;
+      ~ .main-form__label {
+        top: 0;
+        font-size: rem(10px);
+      }
+    }
   }
 
   &__checkbox {
     margin-top: 32px;
   }
+
+  &__label-file-text {
+    opacity: 0.5;
+  }
+
+  &__label-file {
+    display: flex;
+    justify-content: space-between;
+
+    &.has-files {
+      .main-form__label-file-text {
+        display: none;
+      }
+    }
+  }
 }
 
-.checkbox {
-  cursor: pointer;
-  display: flex;
+.feedback-section {
+  --border-color: rgb(255 255 255 / 12%);
 
-  &__fake {
-    display: block;
+  padding: var(--gap-y-l) 0;
+  color: var(--white);
+  background: var(--background-secondary);
+
+  &--light {
+    --border-color: rgb(33 33 33 / 20%);
+
+    color: var(--background-secondary);
+    background: var(--white);
+
+    .feedback-form__submit {
+      color: var(--white);
+      background: var(--background-dark);
+    }
+
+    .checkbox__link {
+      color: #84848b;
+    }
+  }
+}
+
+.attached-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 90%;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px;
+
+    font-size: 14px;
+    color: var(--headline);
+
+    background: var(--black-50);
+    border-radius: 8px;
+  }
+
+  &__item-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 16px;
     height: 16px;
-    margin-right: 12px;
-    padding: 2px;
-
-    border: 1px solid rgb(255 255 255 / 20%);
-  }
-
-  &__input {
-    &:focus {
-      ~ .checkbox__fake {
-        outline: 1px solid rgb(52 240 52);
-      }
-    }
-
-    &:checked {
-      ~ .checkbox__fake {
-        background: url(../assets/images/check.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-      }
-    }
-  }
-
-  &__desc {
-    max-width: 400px;
-  }
-
-  &__desc {
-    font-size: rem(14px);
-    line-height: 140%;
-    color: var(--gray-color);
-  }
-
-  &__link {
-    color: var(--white);
-    text-decoration: underline;
+    margin-left: 4px;
   }
 }

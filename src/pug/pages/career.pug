@@ -1,0 +1,65 @@
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Karriere'
+  - locals.heroDesc = false
+  - locals.heroImage = require('@/images/hero/career.jpg')
+  - locals.heroVideo = false
+  include ../blocks/hero
+  section.section.section--l.section--black-bg 
+    .container.creative-wrapper.creative-wrapper--no-margin 
+      .creative-wrapper__description 
+        p Probier die levantische Küche
+          img(src=require('@/images/c1.svg'), alt="")
+          | mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen 
+          img(src=require('@/images/c2.svg'), alt="")
+          | - für jeden Anlass ein perfektes Essen!
+  include ../blocks/vacancy
+  include ../blocks/features-career
+  include ../blocks/gallery-2
+  include ../blocks/cta
+  section.section.section-feedback.section--no-bot
+    .feedback-section.feedback-section--light
+      .container 
+        .feedback-block 
+          .feedback-block__col.feedback-block__col--text 
+            h3.feedback-block__title  Jetzt Teil unseres Teams werden
+            p.feedback-block__desc Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500.
+          .feedback-block__col.feedback-block__col--form 
+            form.feedback-form(action="") 
+              .feedback-form__grid 
+                .feedback-form__item.feedback-form__item--validate-err
+                  input#feedback-form-2-name.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-2-name") Ihr Vor- und Nachname*
+                .feedback-form__item 
+                  input#feedback-form-2-phone.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-2-phone") Telefonnummer*
+                .feedback-form__item 
+                  input#feedback-form-2-email.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-2-email") E-mail*
+                .feedback-form__item 
+                  input#feedback-form-2-date.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-2-date") Ihr Wunschdatum*
+                .feedback-form__item 
+                  input#feedback-form-2-count.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-2-count") Anzahl der Personen*
+                .feedback-form__item 
+                  input#feedback-form-2-file.feedback-form__input.feedback-form__input--file.js-attached-files(type="file"  multiple)
+                  label.feedback-form__label-file(for="feedback-form-2-file")
+                    span.feedback-form__label-file-text Lebenslauf*
+                    span.feedback-form__file-placeholder
+                      svg.feedback-form__clip-icon(width="18" height="18")
+                        use(xlink:href="sprite.svg#clip_sprite")
+                  span.attached-files-area 
+                    span.attached-files
+              .feedback-form__checkbox.checkbox
+                label.checkbox__label(for="feedback-form-2-checkbox")
+                  input#feedback-form-2-checkbox.visually-hidden.checkbox__input(type="checkbox")
+                  span.checkbox__fake
+                .checkbox__desc
+                  label.checkbox__label(for="feedback-form-2-checkbox") Ich bin mit der Verarbeitung meiner Daten entsprechend der
+                  a.checkbox__link(href="#")  Datenschutzerklärung
+                  label.checkbox__label(for="feedback-form-2-checkbox")  einverstanden
+              button.feedback-form__submit.btn.btn--primary(type="submit")
+                span.btn__inner Anfrage absenden
+  include ../blocks/feedback-block

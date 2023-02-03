@@ -1,0 +1,22 @@
+@use '../utils/mixins' as *;
+
+.features-kegel {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+  @include media(md) {
+    gap: 30px;
+  }
+
+  display: grid;
+  grid-template-columns: 580px 1fr;
+  gap: 70px;
+
+  &__desc {
+    @include media(md) {
+      font-size: rem(24px);
+    }
+
+    font-size: rem(32px);
+  }
+}

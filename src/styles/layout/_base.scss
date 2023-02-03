@@ -112,6 +112,18 @@ img {
     padding-bottom: var(--gap-y-xl);
   }
 
+  &--xl-top {
+    padding-top: var(--gap-y-xl);
+  }
+
+  &--xl-bottom {
+    padding-bottom: var(--gap-y-xl);
+  }
+
+  &--m-bottom {
+    padding-bottom: var(--gap-y-m);
+  }
+
   &--no-bot {
     padding-bottom: 0;
   }
@@ -119,8 +131,8 @@ img {
   &--no-top {
     padding-top: 0;
   }
-}
 
-.section-hero + .section {
-  padding-top: var(--gap-y-xl);
+  &--border-bottom {
+    border-bottom: 1px solid rgb(33 33 33 / 20%);
+  }
 }

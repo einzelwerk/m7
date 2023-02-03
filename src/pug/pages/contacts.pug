@@ -1,0 +1,62 @@
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Kontakt'
+  - locals.heroDesc = false
+  - locals.heroImage = require('@/images/hero/contacts.jpg')
+  - locals.heroVideo = false
+  include ../blocks/hero
+  section.section.section--l.section--black-bg.section--no-bot
+    .container.creative-wrapper 
+      .creative-wrapper__description 
+        p Probier die levantische Küche
+          img(src=require('@/images/c1.svg'), alt="")
+          | mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen 
+          img(src=require('@/images/c2.svg'), alt="")
+          | - für jeden Anlass ein perfektes Essen!
+    include ../blocks/contacts-info
+  section.section.section-feedback.section--no-bot.section--no-top
+    .feedback-section
+      .container 
+        .feedback-block 
+          .feedback-block__col.feedback-block__col--text 
+            h3.feedback-block__title Buchen Sie Räumlichkeiten für Ihre Veranstaltung
+            .feedback-block__manager.manager
+              .manager__photo
+                img(src=require('@/images/manager.jpg'), alt="")
+              .manager__info 
+                span.manager__name Matthias Schweighöfer
+                a.manager__link(href="") 0176 1 222 33 77
+                  svg(width="24" height="24")
+                    use(xlink:href="sprite.svg#wa_sprite") 
+          .feedback-block__col.feedback-block__col--form 
+            form.feedback-form(action="") 
+              .feedback-form__grid 
+                .feedback-form__item 
+                  input#feedback-form-name.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-name") Ihr Vor- und Nachname*
+                .feedback-form__item 
+                  input#feedback-form-phone.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-phone") Telefonnummer*
+                .feedback-form__item 
+                  input#feedback-form-email.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-email") E-mail*
+                .feedback-form__item 
+                  input#feedback-form-date.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-date") Ihr Wunschdatum*
+                .feedback-form__item 
+                  input#feedback-form-count.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-count") Anzahl der Personen*
+                .feedback-form__item 
+                  input#feedback-form-message.feedback-form__input(type="text" placeholder=" ")
+                  label.feedback-form__label(for="feedback-form-message") Ihre Nachricht
+              .feedback-form__checkbox.checkbox
+                label.checkbox__label(for="feedback-form-checkbox")
+                  input#feedback-form-checkbox.visually-hidden.checkbox__input(type="checkbox")
+                  span.checkbox__fake
+                .checkbox__desc
+                  label.checkbox__label(for="feedback-form-checkbox") Ich bin mit der Verarbeitung meiner Daten entsprechend der
+                  a.checkbox__link(href="#")  Datenschutzerklärung
+                  label.checkbox__label(for="feedback-form-checkbox")  einverstanden
+              button.feedback-form__submit.btn.btn--primary(type="submit")
+                span.btn__inner Anfrage absenden

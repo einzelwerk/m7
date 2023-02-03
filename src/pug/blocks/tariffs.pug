@@ -1,0 +1,42 @@
+section.section.container 
+  - locals.sectionTitle = 'Tarife'
+  include ../blocks/section-heading
+  .tariffs-table-wrapper 
+    .tariffs-table
+      .tariffs-table__row.tariffs-table__row--head 
+        .tariffs-table__col 
+          .tariffs-table__item Day
+        .tariffs-table__col 
+          .tariffs-table__item Time
+        .tariffs-table__col 
+          .tariffs-table__item Price
+      .tariffs-table__row 
+        .tariffs-table__col 
+          .tariffs-table__item Monday-Tuesday
+        .tariffs-table__col 
+          .tariffs-table__item 12:00 - 18:00
+        .tariffs-table__col 
+          .tariffs-table__item 15,- €
+      .tariffs-table__row 
+        .tariffs-table__col 
+          .tariffs-table__item Thursday
+        .tariffs-table__col 
+          .tariffs-table__item 12:00 - 18:00
+        .tariffs-table__col 
+          .tariffs-table__item 25,- €
+      .tariffs-table__row
+        .tariffs-table__col 
+          .tariffs-table__item.tariffs-table__item--red-text Saturday
+        .tariffs-table__col 
+          .tariffs-table__item 12:00 - 02:00
+        .tariffs-table__col 
+          .tariffs-table__item 30,- €
+      .tariffs-table__row 
+        .tariffs-table__col 
+          .tariffs-table__item.tariffs-table__item--red-text Sunday
+        .tariffs-table__col 
+          .tariffs-table__item 12:00 - 18:00
+          .tariffs-table__item 18:00 - 00:00
+        .tariffs-table__col 
+          .tariffs-table__item 30,- €
+          .tariffs-table__item 15,- €

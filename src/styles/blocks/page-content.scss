@@ -1,0 +1,33 @@
+@use '../utils/mixins' as *;
+
+.page-content {
+  h4 {
+    margin-bottom: 16px;
+    font-family: var(--font-secondary);
+    font-size: rem(24px);
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+
+      position: relative;
+      top: 10px;
+
+      width: 2px;
+      height: 2px;
+      margin-right: 10px;
+
+      background: currentcolor;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Bar'
+  - locals.heroDesc = false
+  - locals.heroImage = require('@/images/hero/bar.jpg')
+  - locals.heroVideo = false
+  include ../blocks/hero
+  include ../blocks/features-bar
+  include ../blocks/drinks-menu
+  include ../blocks/gallery-2
+  include ../blocks/slider-block
+  include ../blocks/feedback-block

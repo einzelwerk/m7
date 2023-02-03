@@ -1,0 +1,11 @@
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Galerie'
+  - locals.heroDesc = 'Eine rundführung durch die location'
+  - locals.heroImage = require('@/images/hero/gallery.jpg')
+  - locals.heroVideo = false
+  include ../blocks/hero
+  include ../blocks/gallery-grid
+  include ../blocks/slider-block
+  include ../blocks/feedback-block

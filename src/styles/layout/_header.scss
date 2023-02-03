@@ -28,6 +28,32 @@
   }
 
   &__btn {
+    @include media(md) {
+      width: 48px;
+      height: 40px;
+      margin-right: 8px;
+      margin-left: auto;
+
+      background: url(../assets/images/header-btn.svg);
+      background-color: var(--white);
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      .btn__inner {
+        display: none;
+      }
+    }
+
     font-size: rem(18px);
+  }
+
+  &__menu-btn {
+    padding: 8px 22px;
+
+    font-weight: 500;
+    line-height: 150%;
+
+    border: 1px solid rgb(255 255 255 / 40%);
+    border-radius: 6px;
   }
 }

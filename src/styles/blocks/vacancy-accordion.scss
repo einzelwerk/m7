@@ -1,0 +1,141 @@
+@use '../utils/mixins' as *;
+
+.vacancy-accordion {
+  &__arrow {
+    @include media(md) {
+      width: 30px;
+      height: 30px;
+      margin-top: 0;
+
+      svg {
+        width: 12px;
+        height: 6px;
+      }
+    }
+
+    overflow: hidden;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin-top: 12px;
+
+    color: var(--white);
+
+    background: var(--background-secondary);
+    border-radius: 50%;
+
+    transition: 0.5s;
+  }
+
+  &__item {
+    --color: #212121;
+    --background: var(--light-card);
+    @include media(md) {
+      margin-bottom: 16px;
+    }
+
+    overflow: hidden;
+
+    margin-bottom: 24px;
+
+    color: var(--color);
+
+    border-radius: 16px;
+
+    transition: 0.5s;
+
+    &.active {
+      --color: var(--white);
+      --background: var(--background-secondary);
+
+      .vacancy-accordion__arrow {
+        transform: rotate(180deg);
+        color: var(--background-secondary);
+        background: var(--white);
+      }
+    }
+  }
+
+  &__button {
+    @include media(md) {
+      padding: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 40px;
+
+    background: var(--background);
+  }
+
+  &__title {
+    @include media(md) {
+      margin-bottom: 12px;
+      font-size: rem(24px);
+      line-height: 133%;
+    }
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    font-family: var(--font-secondary);
+    font-size: rem(60px);
+    line-height: 150%;
+  }
+
+  &__date {
+    @include media(md) {
+      font-size: rem(16px);
+    }
+
+    font-size: rem(20px);
+  }
+
+  &__body {
+    @include media(md) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 20px;
+    }
+
+    display: grid;
+    grid-template-columns: max-content minmax(min-content, 60%);
+    justify-content: space-between;
+
+    padding: 40px;
+
+    color: var(--color);
+
+    background: var(--background);
+  }
+
+  &__content-wrapper {
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+
+    &.active {
+      visibility: visible;
+    }
+  }
+
+  &__btn {
+    @include media(md) {
+      padding: 10px;
+      font-size: rem(18px);
+    }
+
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: rem(20px);
+  }
+}

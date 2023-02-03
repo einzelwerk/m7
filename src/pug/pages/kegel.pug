@@ -1,0 +1,36 @@
+extends ../layouts/main
+
+block content
+  - locals.heroTitle = 'Kegel'
+  - locals.heroDesc = false
+  - locals.heroImage = require('@/images/hero/kegel.jpg')
+  - locals.heroVideo = false
+  include ../blocks/hero
+  section.section.section--l.section--border-bottom
+    .container
+      .creative-wrapper 
+        .creative-wrapper__description 
+          p Probier die levantische Küche
+            img(src=require('@/images/c1.svg'), alt="")
+            | mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen 
+            img(src=require('@/images/c2.svg'), alt="")
+            | - für jeden Anlass ein perfektes Essen!
+        button.creative-wrapper__btn.btn.btn--secondary(data-modal="reserve")
+          span.btn__inner Book bowling
+
+      .features-kegel 
+        .features-kegel__desc Die M7 Kegelbahn ist norddeutschlandweit die einzige Schwarzlicht-Kegelbahn und somit der ideale Treffpunkt für sportliches Vergnügen in fröhlicher Gesellschaft. Probier dein Glück und lass dich gleichzeitig von uns kulinarisch verwöhnen.
+        .features-bar.features-bar--grid
+          .features-bar__item.swiper-slide 
+            picture.features-bar__image
+              img(src=require('@/images/features-bar/1.svg'), alt="")
+            h3.features-bar__title Wir sind die einzige Schwarzlichtkegelbahn in Norddeutschland
+          .features-bar__item.swiper-slide 
+            picture.features-bar__image
+              img(src=require('@/images/features-bar/2.svg'), alt="")
+            h3.features-bar__title Wir öffnen für Sie auch individuell nach Vereinbarung
+  include ../blocks/tariffs
+  include ../blocks/menu-category
+  include ../blocks/gallery-2
+  include ../blocks/slider-block
+  include ../blocks/feedback-block

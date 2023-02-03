@@ -1,7 +1,13 @@
+@use '../utils/mixins' as *;
+
 .partners {
   overflow: visible;
 
   &__item {
+    @include media(md) {
+      height: 120px;
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,8 +19,14 @@
   }
 
   &__logo {
-    max-width: 100%;
+    max-width: 100px;
     max-height: 100%;
     text-align: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }

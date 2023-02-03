@@ -3,23 +3,6 @@
 .lang-switcher {
   position: relative;
 
-  &__current {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 14px 16px;
-
-    font-size: rem(18px);
-
-    border: 1px solid var(--white-40);
-    border-radius: 6px;
-
-    svg {
-      margin-left: 8px;
-    }
-  }
-
   &__list {
     position: absolute;
     top: 100%;
@@ -40,6 +23,32 @@
 
     &.active {
       display: block;
+    }
+  }
+
+  &--to-top {
+    .lang-switcher__list {
+      top: auto;
+      bottom: 100%;
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    font-size: rem(18px);
+
+    border: 1px solid var(--white-40);
+    border-radius: 6px;
+
+    svg {
+      margin-left: 8px;
     }
   }
 

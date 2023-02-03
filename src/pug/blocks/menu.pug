@@ -19,14 +19,10 @@ section.section.section--white-bg
   .menu.swiper.container 
     .menu-wrapper.swiper-wrapper
       each val,index in [1,2,3,4,5]
-        .menu__item.swiper-slide 
-          picture.menu__image 
-            img(src=require(`@/images/menu/${val}.jpg`), alt="")
-          .menu__heading 
-            h5.menu__name Baku kumpir
-            span.menu__price €25.00
+        - locals.slider = true
+        include ../blocks/menu-item
   .container.button-group 
     a.button-group__item.btn.btn--border(href="") 
       span.btn__inner Speisekarte
-    button.button-group__item.btn.btn--secondary(type="button") 
+    button.button-group__item.btn.btn--secondary(type="button" data-modal="reserve") 
       span.btn__inner Eventanfrage

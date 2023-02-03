@@ -1,19 +1,39 @@
 @use '../utils/mixins' as *;
 
-.creative-description {
-  @include media(md) {
-    font-size: rem(32px);
-    line-height: 120%;
+.creative-wrapper {
+  @include media(lg) {
+    margin-bottom: 60px;
   }
 
-  font-family: var(--font-secondary);
-  font-size: rem(72px);
-  line-height: 84px;
+  margin-bottom: 100px;
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    @include media(md) {
+      font-size: rem(32px);
+      line-height: 120%;
+    }
+
+    font-family: var(--font-secondary);
+    font-size: rem(72px);
+    line-height: 84px;
+  }
+
+  &__btn {
+    margin-top: 48px;
+    padding: 17px 22px;
+    font-size: rem(20px);
+    border-radius: 12px;
+  }
 
   img {
     @include media(md) {
       width: 35px;
       height: 35px;
+      margin-bottom: -8px;
     }
 
     width: 80px;

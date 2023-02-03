@@ -1,0 +1,47 @@
+section.section.section--l.section--m-bottom.container
+  - locals.sectionTitle = 'Stellenausschreibungen'
+  include ../blocks/section-heading
+  .vacancy-accordion
+    each val in [1,2,3,4]
+      .vacancy-accordion__item
+        button.vacancy-accordion__button(type="button")
+          h2.vacancy-accordion__heading
+            span.vacancy-accordion__title Koch für ein Restaurant mit Kegelbahn (m/w/d)
+              span.vacancy-accordion__arrow
+                svg(width="15" height="8")
+                  use(xlink:href="sprite.svg#arrow_d_sprite") 
+          time.vacancy-accordion__date(datetime="2022-11-25") 25. November 2022
+        .vacancy-accordion__content-wrapper
+          .vacancy-accordion__body
+            aside.vacancy-accordion__col
+              .manager
+                .manager__photo
+                  img(src=require('@/images/manager.jpg'), alt="")
+                .manager__info 
+                  span.manager__name Marcel Kokot
+                  a.manager__link(href="tel:")  Telefon: +49 176 122 233 77
+                  a.manager__link(href="mailto:")  E-Mail: hr(ät)imogroup.de
+            .vacancy-accordion__col.vacancy-accordion__col--desc
+              .vacancy-accordion__content.page-content
+                h4 Deine Aufgaben:
+                ul 
+                  li Ausgabe der Speisen und Zubereitung warmer/kalter Getränke unter Einhaltung aller Hygienevorschriften
+                  li Führung und Abrechnung der Kasse
+                  li Arbeitsort: Restaurant mit Kegelbahn und in Zukunft auch im Food Truck auf Events
+                h4 Deine Aufgaben:
+                ul 
+                  li Ausgabe der Speisen und Zubereitung warmer/kalter Getränke unter Einhaltung aller Hygienevorschriften
+                  li Führung und Abrechnung der Kasse
+                  li Arbeitsort: Restaurant mit Kegelbahn und in Zukunft auch im Food Truck auf Events
+                h4 Deine Aufgaben:
+                ul 
+                  li Ausgabe der Speisen und Zubereitung warmer/kalter Getränke unter Einhaltung aller Hygienevorschriften
+                  li Führung und Abrechnung der Kasse
+                  li Arbeitsort: Restaurant mit Kegelbahn und in Zukunft auch im Food Truck auf Events
+                h4 Deine Aufgaben:
+                p Wenn diese Anzeige nicht die Chance deines Lebens ist…
+                p Wir freuen uns auf deine aussagekräftigen Bewerbungsunterlagen! Bitte bewirb dich unter der Angabe deines frühestmöglichen Eintrittstermins und deiner Gehaltsvorstellung per E-Mail.
+                p Wir freuen uns auf dich!
+                p - Dein HR Team -
+              button.vacancy-accordion__btn.btn.btn--primary(type="button" data-modal="jobs")
+                span.btn__inner Jetzt bewerben

@@ -10,15 +10,19 @@ footer.footer
       .contacts-grid__col 
         .contacts-grid__title Telefon
         a.contacts-grid__value.contacts-grid__value--link(href="tel:017612223377") 0176 1 222 33 77
-    .footer__socials.socials 
-      a.socials__item(href="" aria-label="Go to facebook") 
-        img.socials__icon(src=require('@/images/socials/1.svg'), alt="")
-      a.socials__item(href="" aria-label="Go to facebook") 
-        img.socials__icon(src=require('@/images/socials/2.svg'), alt="")
-      a.socials__item(href="" aria-label="Go to facebook") 
-        img.socials__icon(src=require('@/images/socials/3.svg'), alt="")
+    .footer__social.socials 
+      ul.socials__list.socials__list--horizontal
+        li.socials__item 
+          a.socials__link(href="" aria-label="" title="")
+            img.socials__image(src=require('@/images/socials/1.svg'), alt="") 
+        li.socials__item 
+          a.socials__link(href="" aria-label="" title="")
+            img.socials__image(src=require('@/images/socials/2.svg'), alt="") 
+        li.socials__item 
+          a.socials__link(href="" aria-label="" title="")
+            img.socials__image(src=require('@/images/socials/3.svg'), alt="") 
     .footer__policy 
       a.footer__policy-link(href="") Impressum
       a.footer__policy-link(href="") Datenschutz
 
-
+include ../blocks/modals
