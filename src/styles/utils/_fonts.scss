@@ -1,6 +1,0 @@
-@use './mixins' as *;
-
-@include font-face(Degular, '../assets/fonts/Degular-Regular', 400, normal, woff2 woff);
-@include font-face(Degular, '../assets/fonts/Degular-Medium', 500, normal, woff2 woff);
-@include font-face(DegularDisplay, '../assets/fonts/DegularDisplay-Regular', 400, normal, woff2 woff);
-@include font-face(DegularDisplay, '../assets/fonts/DegularDisplay-Medium', 500, normal, woff2 woff);

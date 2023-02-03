@@ -1,0 +1,8 @@
+export default {
+      id: "panorama_sprite-usage",
+      viewBox: "0 0 25 28",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\m7\\src\\assets\\icons\\panorama_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

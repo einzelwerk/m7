@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <script defer src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
+  <body>
+<header class="header"> 
+  <div class="header__inner container"> 
+    <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__image" src="assets/images/logo.svg" alt=""></a></div>
+    <nav class="header__nav nav"> 
+      <ul class="nav__list"> 
+        <li class="nav__item nav__item--current"><a class="nav__link" href="/m7">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/events.html">Events</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/bar.html">Bar</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/kegel.html">Kegel</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/gallery.html">Galerie</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/menu.html">Menü</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/career.html">Karrier</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/menu.html">Menü</a></li>
+        <li class="nav__item"><a class="nav__link" href="/m7/contacts.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <nav class="header__lang-switcher lang-switcher hidden-mobile">
+      <button class="lang-switcher__current" type="button">De
+        <svg width="16" height="16">
+          <use xlink:href="sprite.svg#arrow_sprite"> </use>
+        </svg>
+      </button>
+      <ul class="lang-switcher__list"> 
+        <li class="lang-switcher__item lang-switcher__item--selected"><a class="lang-switcher__link" rel="alternate" href="/de" hrefLang="de">De</a></li>
+        <li class="lang-switcher__item"> <a class="lang-switcher__link" rel="alternate" href="/ru" hrefLang="ru">Ru</a></li>
+      </ul>
+    </nav>
+    <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
+    <button class="header__menu-btn hidden-desktop js-open-nav" type="button">Menu</button>
+  </div>
+</header>
+<div class="mobile-nav-wrapper" id="nav" aria-hidden="true">
+  <div class="mobile-nav-wrapper__header header">
+    <div class="header__inner container">
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__image" src="assets/images/logo.svg" alt=""></a></div>
+      <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
+      <button class="header__menu-btn mobile-nav-wrapper__close" type="button">Close</button>
+    </div>
+  </div>
+  <nav class="mobile-nav hidden-desktop container">
+    <ul class="mobile-nav__list"> 
+      <li class="mobile-nav__item mobile-nav__item--current"><a class="mobile-nav__link" href="/m7">Home</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/events.html">Events</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/bar.html">Bar</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/kegel.html">Kegel</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/gallery.html">Galerie</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/menu.html">Menü</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/career.html">Karrier</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/menu.html">Menü</a></li>
+      <li class="mobile-nav__item"><a class="mobile-nav__link" href="/m7/contacts.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-nav-wrapper__footer container"> 
+    <nav class="header__lang-switcher lang-switcher lang-switcher--to-top">
+      <button class="lang-switcher__current" type="button">De
+        <svg width="16" height="16">
+          <use xlink:href="sprite.svg#arrow_sprite"> </use>
+        </svg>
+      </button>
+      <ul class="lang-switcher__list"> 
+        <li class="lang-switcher__item lang-switcher__item--selected"><a class="lang-switcher__link" rel="alternate" href="/de" hrefLang="de">De</a></li>
+        <li class="lang-switcher__item"> <a class="lang-switcher__link" rel="alternate" href="/ru" hrefLang="ru">Ru</a></li>
+      </ul>
+    </nav><a class="mobile-nav__link" href="tel:0176 1 222 33 77">0176 1 222 33 77</a>
+  </div>
+</div>
+    <main class="main">
+<section class="section-hero"> 
+  <div class="hero">
+    <picture class="hero__picture"><img src="assets/images/hero/home.jpg" alt=""></picture>
+    <div class="hero__content container"> 
+      <div class="hero__text">
+        <h1 class="hero__title">Kegel. Gourmet. Bar</h1>
+        <p class="hero__desc">Möckernstraße 7 - 30163 Hannover</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--black-bg">
+  <div class="container"> 
+    <div class="features"> 
+      <p class="features__desc">Ob privat für Geburtstage, Hochzeit, Taufe, Jubiläum oder andere Familien-feiern oder geschäftlich für Workshops, Meetings & Besprechungen – wir gestalten Ihren Aufenthalt nach Ihren Wünschen.</p>
+      <div class="features-grid"> 
+        <div class="features-grid__item"> <span class="features-grid__number">3</span><span class="features-grid__title">Hallen</span></div>
+        <div class="features-grid__item"> <span class="features-grid__number">80</span><span class="features-grid__title">Sitzplätzen</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--black-bg"> 
+  <div class="container">
+<div class="section-heading">
+  <h2 class="section-heading__title">Unsere Räumlichkeiten</h2>
+</div>
+  </div>
+  <div class="services swiper container">
+    <div class="services-wrapper swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">01</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">02</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">03</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">04</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">05</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="services__item">
+          <picture class="services__image"><img src="assets/images/services/1.jpg" alt=""></picture>
+          <div class="services__content"> 
+            <div class="services__count slider-counter"> <span class="slider-counter__current">06</span><span class="slider-counter__length">/06</span></div>
+            <h3 class="services__title">Kegel</h3>
+            <div class="services__capacity">
+              <svg width="18" height="18">
+                <use xlink:href="sprite.svg#user_sprite"> </use>
+              </svg><span>50 Personen</span>
+            </div>
+            <div class="services__list services-list"> 
+              <h4 class="services-list__title">Unser Service für Sie</h4>
+              <ul class="services-list__list"> 
+                <li class="services-list__item">Individuelle Dekoration</li>
+                <li class="services-list__item">Service Nr. 2</li>
+                <li class="services-list__item">Service Nr. 2</li>
+              </ul>
+            </div>
+          </div>
+          <button class="services__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Event anfragen</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section panorama-section section--black-bg">
+  <div class="panorama">
+    <div class="panorama__inner">
+      <picture class="panorama__image"><img src="assets/images/panorama.jpg" alt=""></picture>
+      <div class="panorama__text">
+        <h3 class="panorama__title">360°-Panorama</h3>
+        <p class="panorama__desc">Wir laden Sie herzlich auf einen virtuellen 360 Grad Rundgang durch unsere Räumlichkeiten ein.</p><a class="panorama__btn" data-glightbox data-gallery="1" href="https://my.matterport.com/show/?m=1Q9GaHT7xvZ" role="button">
+          <svg width="24" height="28">
+            <use xlink:href="sprite.svg#panorama_sprite"> </use>
+          </svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section container"> 
+  <div class="slider-block"> 
+    <div class="slider-block__text"> 
+      <h2 class="slider-block__title">Events</h2>
+      <p class="slider-block__desc">Probieren Sie die levantische Küche mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting & Besprechungen – für jeden Anlass ein perfektes Essen!</p>
+      <button class="slider-block__btn btn btn--secondary" type="button" data-modal="reserve">Event anfragen</button>
+    </div>
+    <div class="slider-block__slider">
+      <div class="default-slider swiper"> 
+        <div class="swiper-wrapper">
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">01</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">02</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">03</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">04</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">05</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__item swiper-slide">
+            <picture class="default-slider__image"> <img src="assets/images/qwe.jpg" alt=""></picture>
+            <div class="default-slider__info">
+              <div class="default-slider__counter slider-counter"><span class="slider-counter__current">06</span><span class="slider-counter__length">/10</span></div>
+              <h3 class="default-slider__title">Große Halle</h3>
+            </div>
+          </div>
+          <div class="default-slider__pagination slider-pagination hidden-desktop"></div>
+          <div class="default-slider__nav slider-navigation"> 
+            <button class="slider-navigation__item slider-navigation__item--prev">
+              <svg width="8" height="15">
+                <use xlink:href="sprite.svg#arrow_l_sprite"> </use>
+              </svg>
+            </button>
+            <button class="slider-navigation__item slider-navigation__item--next">
+              <svg width="8" height="15">
+                <use xlink:href="sprite.svg#arrow_r_sprite"> </use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--white-bg">
+  <div class="container"> 
+<div class="section-heading">
+  <h2 class="section-heading__title">Unsere Speisen</h2>
+  <p class="section-heading__desc">Probieren Sie die levantische Küche mit osteuropäischer Note, das Beste aus dem Orient und Okzident.  Ob für den Hunger zwischendurch oder anderen Feierlichkeiten wie Geburtstage, Jubiläum, Firmenfeier, Workshops, Meeting &amp; Besprechungen – für jeden Anlass ein perfektes Essen!</p>
+</div>
+    <aside class="guest-options"> 
+      <div class="guest-options__item"> 
+        <div class="guest-options__text"> 
+          <h4 class="guest-options__title">bis 20 Personen</h4>
+          <p class="guest-options__desc">3-Gänge-Menüs (ab 30,-€ pro Person) beinhaltet eine kalte oder warme Vorspeise, zwei Hauptgänge zur Auswahl mit Gemüse, Beilage und ein Dessert.</p>
+        </div>
+        <div class="guest-options__image"> <img src="assets/images/guests/1.svg" alt=""></div>
+      </div>
+      <div class="guest-options__item"> 
+        <div class="guest-options__text"> 
+          <h4 class="guest-options__title">Ab 20 Personen</h4>
+          <p class="guest-options__desc">Wir bieten Hauptspeisen und Desserts als Büffet an</p>
+        </div>
+        <div class="guest-options__image"> <img src="assets/images/guests/2.svg" alt=""></div>
+      </div>
+    </aside>
+  </div>
+  <div class="menu swiper container"> 
+    <div class="menu-wrapper swiper-wrapper">
+<div class="menu-grid__item menu-item swiper-slide">
+  <picture class="menu-item__image"> <img src="assets/images/menu/1.jpg" alt=""></picture>
+  <div class="menu-item__info">
+    <h3 class="menu-item__name">Plov</h3><span class="menu-item__line" aria-hidden="true"></span><span class="menu-item__price">16,-</span>
+  </div>
+  <p class="menu-item__ingredients">mit Kemöl und gerösteten Kürbiskernen</p>
+</div>
+<div class="menu-grid__item menu-item swiper-slide">
+  <picture class="menu-item__image"> <img src="assets/images/menu/1.jpg" alt=""></picture>
+  <div class="menu-item__info">
+    <h3 class="menu-item__name">Plov</h3><span class="menu-item__line" aria-hidden="true"></span><span class="menu-item__price">16,-</span>
+  </div>
+  <p class="menu-item__ingredients">mit Kemöl und gerösteten Kürbiskernen</p>
+</div>
+<div class="menu-grid__item menu-item swiper-slide">
+  <picture class="menu-item__image"> <img src="assets/images/menu/1.jpg" alt=""></picture>
+  <div class="menu-item__info">
+    <h3 class="menu-item__name">Plov</h3><span class="menu-item__line" aria-hidden="true"></span><span class="menu-item__price">16,-</span>
+  </div>
+  <p class="menu-item__ingredients">mit Kemöl und gerösteten Kürbiskernen</p>
+</div>
+<div class="menu-grid__item menu-item swiper-slide">
+  <picture class="menu-item__image"> <img src="assets/images/menu/1.jpg" alt=""></picture>
+  <div class="menu-item__info">
+    <h3 class="menu-item__name">Plov</h3><span class="menu-item__line" aria-hidden="true"></span><span class="menu-item__price">16,-</span>
+  </div>
+  <p class="menu-item__ingredients">mit Kemöl und gerösteten Kürbiskernen</p>
+</div>
+<div class="menu-grid__item menu-item swiper-slide">
+  <picture class="menu-item__image"> <img src="assets/images/menu/1.jpg" alt=""></picture>
+  <div class="menu-item__info">
+    <h3 class="menu-item__name">Plov</h3><span class="menu-item__line" aria-hidden="true"></span><span class="menu-item__price">16,-</span>
+  </div>
+  <p class="menu-item__ingredients">mit Kemöl und gerösteten Kürbiskernen</p>
+</div>
+    </div>
+  </div>
+  <div class="container button-group"> <a class="button-group__item btn btn--border" href=""> <span class="btn__inner">Speisekarte</span></a>
+    <button class="button-group__item btn btn--secondary" type="button" data-modal="reserve"> <span class="btn__inner">Eventanfrage</span></button>
+  </div>
+</section>
+<section class="section section--white-bg"> 
+  <div class="container"> 
+<div class="section-heading">
+  <h2 class="section-heading__title">Bevorstehende Events</h2>
+</div>
+    <div class="events swiper">
+      <div class="events__nav slider-navigation"> 
+        <button class="slider-navigation__item slider-navigation__item--prev">
+          <svg width="8" height="15">
+            <use xlink:href="sprite.svg#arrow_l_sprite"> </use>
+          </svg>
+        </button>
+        <button class="slider-navigation__item slider-navigation__item--next">
+          <svg width="8" height="15">
+            <use xlink:href="sprite.svg#arrow_r_sprite"> </use>
+          </svg>
+        </button>
+      </div>
+      <div class="events-wrapper swiper-wrapper">
+        <div class="events__item swiper-slide" style="--events-color:var(--red-accent)">
+          <div class="events__content">
+            <div class="events__counter slider-counter"><span class="slider-counter__current">01</span><span class="slider-counter__length">/04</span></div>
+            <h3 class="events__title">Open Mic 0</h3>
+            <time class="events__date" datetime="2022-11-25">25. November 2022</time>
+            <button class="events__btn btn btn--primary" data-modal="reserve"><span class="btn__inner">Anfrage absenden</span></button>
+          </div>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
+        </div>
+        <div class="events__item swiper-slide" style="--events-color:green">
+          <div class="events__content">
+            <div class="events__counter slider-counter"><span class="slider-counter__current">02</span><span class="slider-counter__length">/04</span></div>
+            <h3 class="events__title">Open Mic 1</h3>
+            <time class="events__date" datetime="2022-11-25">25. November 2022</time>
+            <button class="events__btn btn btn--primary" data-modal="reserve"><span class="btn__inner">Anfrage absenden</span></button>
+          </div>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
+        </div>
+        <div class="events__item swiper-slide" style="--events-color:lightblue">
+          <div class="events__content">
+            <div class="events__counter slider-counter"><span class="slider-counter__current">03</span><span class="slider-counter__length">/04</span></div>
+            <h3 class="events__title">Open Mic 2</h3>
+            <time class="events__date" datetime="2022-11-25">25. November 2022</time>
+            <button class="events__btn btn btn--primary" data-modal="reserve"><span class="btn__inner">Anfrage absenden</span></button>
+          </div>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
+        </div>
+        <div class="events__item swiper-slide" style="--events-color:pink">
+          <div class="events__content">
+            <div class="events__counter slider-counter"><span class="slider-counter__current">04</span><span class="slider-counter__length">/04</span></div>
+            <h3 class="events__title">Open Mic 3</h3>
+            <time class="events__date" datetime="2022-11-25">25. November 2022</time>
+            <button class="events__btn btn btn--primary" data-modal="reserve"><span class="btn__inner">Anfrage absenden</span></button>
+          </div>
+          <picture class="events__image">
+            <source media="(max-width:768px)" srcset="assets/images/events/1-m.svg"><img src="assets/images/events/1.svg" alt="">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--white-bg"> 
+  <div class="presentation-block container"> 
+    <div class="presentation-block__col presentation-block__col--text"> 
+      <h3 class="presentation-block__title">Hannover 96 e.V. Sportkegeln</h3>
+      <div class="presentation-block__desc">
+        <p>Der Hauptverein Hannover 96 e.V. bietet seinen über 20.000 Mitglieder ein breit gefächertes Sportangebot in insgesamt 18 verschiedenen Abteilungen. Eine davon ist das Sportkegeln mit 36 Mitgliedern, jeden Alters.</p>
+        <p>Kegeln auf einer Bohlebahn ist eine Präzisionssportart, bei der ein Spieler von einem Ende einer vorgeschrieben gekehlten Holz-Kunststoffbahn aus mit kontrolliertem Schwung eine Kugel ins Rollen bringt, um die am anderen Ende der Bahn aufgestellten neun Kegel umzuwerfen. Die Kegel sind dabei gleichmäßig in Form eines Quadrats angeordnet, das auf der Spitze steht.</p>
+      </div>
+      <div class="presentation-block__links"><a class="presentation-block__link" href="tel:77777"> 
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#phone_sprite"> </use>
+          </svg>017686098142</a><a class="presentation-block__link" href=""> 
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#email_sprite"> </use>
+          </svg>E-Mail senden</a></div>
+    </div>
+    <div class="presentation-block__col presentation-block__col--image"> 
+      <picture class="presentation-block__image"> <img src="assets/images/presentation.jpg" alt=""></picture>
+    </div>
+  </div>
+</section>
+<section class="section section--white-bg">
+  <div class="container">
+<div class="section-heading">
+  <h2 class="section-heading__title">Unsere Partner</h2>
+</div>
+    <div class="partners swiper"> 
+      <div class="partners swiper-wrapper"> 
+        <div class="partners__item swiper-slide"> 
+          <picture class="partners__logo"><img src="assets/images/partners/1.svg" alt=""></picture>
+        </div>
+        <div class="partners__item swiper-slide"> 
+          <picture class="partners__logo"><img src="assets/images/partners/1.svg" alt=""></picture>
+        </div>
+        <div class="partners__item swiper-slide"> 
+          <picture class="partners__logo"><img src="assets/images/partners/1.svg" alt=""></picture>
+        </div>
+        <div class="partners__item swiper-slide"> 
+          <picture class="partners__logo"><img src="assets/images/partners/1.svg" alt=""></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-feedback section--no-bot">
+  <div class="feedback-section">
+    <div class="container"> 
+      <div class="feedback-block"> 
+        <div class="feedback-block__col feedback-block__col--text"> 
+          <h3 class="feedback-block__title">Buchen Sie Räumlichkeiten für Ihre Veranstaltung</h3>
+          <div class="feedback-block__manager manager">
+            <div class="manager__photo"><img src="assets/images/manager.jpg" alt=""></div>
+            <div class="manager__info"> <span class="manager__name">Matthias Schweighöfer</span><a class="manager__link" href="">0176 1 222 33 77
+                <svg width="24" height="24">
+                  <use xlink:href="sprite.svg#wa_sprite"> </use>
+                </svg></a></div>
+          </div>
+        </div>
+        <div class="feedback-block__col feedback-block__col--form"> 
+          <form class="feedback-form" action=""> 
+            <div class="feedback-form__grid"> 
+              <div class="feedback-form__item feedback-form__item--validate-err">
+                <input class="feedback-form__input" id="feedback-form-name" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-name">Ihr Vor- und Nachname*</label>
+              </div>
+              <div class="feedback-form__item"> 
+                <input class="feedback-form__input" id="feedback-form-phone" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-phone">Telefonnummer*</label>
+              </div>
+              <div class="feedback-form__item"> 
+                <input class="feedback-form__input" id="feedback-form-email" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-email">E-mail*</label>
+              </div>
+              <div class="feedback-form__item"> 
+                <input class="feedback-form__input" id="feedback-form-date" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-date">Ihr Wunschdatum*</label>
+              </div>
+              <div class="feedback-form__item"> 
+                <input class="feedback-form__input" id="feedback-form-count" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-count">Anzahl der Personen*</label>
+              </div>
+              <div class="feedback-form__item"> 
+                <input class="feedback-form__input" id="feedback-form-message" type="text" placeholder=" ">
+                <label class="feedback-form__label" for="feedback-form-message">Ihre Nachricht</label>
+              </div>
+            </div>
+            <div class="feedback-form__checkbox checkbox">
+              <label class="checkbox__label" for="feedback-form-checkbox">
+                <input class="visually-hidden checkbox__input" id="feedback-form-checkbox" type="checkbox"><span class="checkbox__fake"></span>
+              </label>
+              <div class="checkbox__desc">
+                <label class="checkbox__label" for="feedback-form-checkbox">Ich bin mit der Verarbeitung meiner Daten entsprechend der</label><a class="checkbox__link" href="#"> Datenschutzerklärung</a>
+                <label class="checkbox__label" for="feedback-form-checkbox"> einverstanden</label>
+              </div>
+            </div>
+            <button class="feedback-form__submit btn btn--primary" type="submit"><span class="btn__inner">Anfrage absenden</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__contacts contacts-grid"> 
+      <div class="contacts-grid__col"> 
+        <div class="contacts-grid__title">Adresse</div>
+        <address class="contacts-grid__value">Möckernstraße 7,30163 Hannover</address>
+      </div>
+      <div class="contacts-grid__col"> 
+        <div class="contacts-grid__title">Mail</div><a class="contacts-grid__value contacts-grid__value--link" href="mailto:info@m7kgb.com">info@m7kgb.com</a>
+      </div>
+      <div class="contacts-grid__col"> 
+        <div class="contacts-grid__title">Telefon</div><a class="contacts-grid__value contacts-grid__value--link" href="tel:017612223377">0176 1 222 33 77</a>
+      </div>
+    </div>
+    <div class="footer__social socials"> 
+      <ul class="socials__list socials__list--horizontal">
+        <li class="socials__item"> <a class="socials__link" href="" aria-label="" title=""><img class="socials__image" src="assets/images/socials/1.svg" alt=""></a></li>
+        <li class="socials__item"> <a class="socials__link" href="" aria-label="" title=""><img class="socials__image" src="assets/images/socials/2.svg" alt=""></a></li>
+        <li class="socials__item"> <a class="socials__link" href="" aria-label="" title=""><img class="socials__image" src="assets/images/socials/3.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="footer__policy"> <a class="footer__policy-link" href="">Impressum</a><a class="footer__policy-link" href="">Datenschutz</a></div>
+  </div>
+</footer>
+<div class="modal-wrapper" data-modal-el="reserve">
+  <div class="modal">
+    <button class="modal__close" type="button">
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#close_sprite"> </use>
+      </svg>
+    </button>
+    <h3 class="modal__title"> Buchen Sie unsere moderne und gepflegte Kegelbahn Anlage</h3>
+    <p class="modal__desc">Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500.
+      <form class="modal__form feedback-form feedback-form--light" action=""> 
+        <div class="feedback-form__grid"> 
+          <div class="feedback-form__item feedback-form__item--validate-err">
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-name" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-name">Ihr Vor- und Nachname*</label>
+          </div>
+          <div class="feedback-form__item"> 
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-phone" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-phone">Telefonnummer*</label>
+          </div>
+          <div class="feedback-form__item"> 
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-email" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-email">E-mail*</label>
+          </div>
+          <div class="feedback-form__item"> 
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-date" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-date">Ihr Wunschdatum*</label>
+          </div>
+          <div class="feedback-form__item"> 
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-count" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-count">Anzahl der Personen*</label>
+          </div>
+          <div class="feedback-form__item"> 
+            <input class="feedback-form__input" id="feedback-form-modal-reserve-message" type="text" placeholder=" ">
+            <label class="feedback-form__label" for="feedback-form-modal-reserve-message">Ihre Nachricht</label>
+          </div>
+        </div>
+        <div class="feedback-form__checkbox checkbox">
+          <label class="checkbox__label" for="feedback-form-modal-reserve-checkbox">
+            <input class="visually-hidden checkbox__input" id="feedback-form-modal-reserve-checkbox" type="checkbox"><span class="checkbox__fake"></span>
+          </label>
+          <div class="checkbox__desc">
+            <label class="checkbox__label" for="feedback-form-modal-reserve-checkbox">Ich bin mit der Verarbeitung meiner Daten entsprechend der</label><a class="checkbox__link" href="#"> Datenschutzerklärung</a>
+            <label class="checkbox__label" for="feedback-form-modal-reserve-checkbox"> einverstanden</label>
+          </div>
+        </div>
+        <button class="feedback-form__submit btn btn--primary" type="submit"><span class="btn__inner">Anfrage absenden</span></button>
+      </form>
+    </p>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="jobs">
+  <div class="modal">
+    <button class="modal__close" type="button">
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#close_sprite"> </use>
+      </svg>
+    </button>
+    <h3 class="modal__title"> Jetzt Teil unseres Teams werden</h3>
+    <p class="modal__desc">Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500.
+      <div class="feedback-block__col feedback-block__col--form"> 
+        <form class="feedback-form feedback-form--light" action=""> 
+          <div class="feedback-form__grid"> 
+            <div class="feedback-form__item feedback-form__item--validate-err">
+              <input class="feedback-form__input" id="feedback-form-modal-jobs-name" type="text" placeholder=" ">
+              <label class="feedback-form__label" for="feedback-form-modal-jobs-name">Ihr Vor- und Nachname*</label>
+            </div>
+            <div class="feedback-form__item"> 
+              <input class="feedback-form__input" id="feedback-form-modal-jobs-phone" type="text" placeholder=" ">
+              <label class="feedback-form__label" for="feedback-form-modal-jobs-phone">Telefonnummer*</label>
+            </div>
+            <div class="feedback-form__item"> 
+              <input class="feedback-form__input" id="feedback-form-modal-jobs-email" type="text" placeholder=" ">
+              <label class="feedback-form__label" for="feedback-form-modal-jobs-email">E-mail*</label>
+            </div>
+            <div class="feedback-form__item"> 
+              <input class="feedback-form__input" id="feedback-form-modal-jobs-date" type="text" placeholder=" ">
+              <label class="feedback-form__label" for="feedback-form-modal-jobs-date">Ihr Wunschdatum*</label>
+            </div>
+            <div class="feedback-form__item"> 
+              <input class="feedback-form__input" id="feedback-form-modal-jobs-count" type="text" placeholder=" ">
+              <label class="feedback-form__label" for="feedback-form-modal-jobs-count">Anzahl der Personen*</label>
+            </div>
+            <div class="feedback-form__item"> 
+              <input class="feedback-form__input feedback-form__input--file js-attached-files" id="feedback-form-modal-jobs-file" type="file" multiple>
+              <label class="feedback-form__label-file" for="feedback-form-modal-jobs-file"><span class="feedback-form__label-file-text">Lebenslauf*</span><span class="feedback-form__file-placeholder">
+                  <svg class="feedback-form__clip-icon" width="18" height="18">
+                    <use xlink:href="sprite.svg#clip_sprite"></use>
+                  </svg></span></label><span class="attached-files-area"> <span class="attached-files"></span></span>
+            </div>
+          </div>
+          <div class="feedback-form__checkbox checkbox">
+            <label class="checkbox__label" for="feedback-form-modal-jobs-checkbox">
+              <input class="visually-hidden checkbox__input" id="feedback-form-modal-jobs-checkbox" type="checkbox"><span class="checkbox__fake"></span>
+            </label>
+            <div class="checkbox__desc">
+              <label class="checkbox__label" for="feedback-form-modal-jobs-checkbox">Ich bin mit der Verarbeitung meiner Daten entsprechend der</label><a class="checkbox__link" href="#"> Datenschutzerklärung</a>
+              <label class="checkbox__label" for="feedback-form-modal-jobs-checkbox"> einverstanden</label>
+            </div>
+          </div>
+          <button class="feedback-form__submit btn btn--primary" type="submit"><span class="btn__inner">Anfrage absenden</span></button>
+        </form>
+      </div>
+    </p>
+  </div>
+</div>
+  </body>
+</html>
