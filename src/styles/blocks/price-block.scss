@@ -8,6 +8,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
   justify-content: space-between;
 
   padding: 40px;
@@ -66,6 +67,17 @@
   &__price-heading {
     font-size: rem(20px);
     line-height: 150%;
+  }
+
+  &__line {
+    @include media(md) {
+      display: none;
+    }
+
+    flex: 1;
+    height: 1px;
+    margin: 0 14px 0.6rem;
+    background: rgb(255 255 255 / 20%);
   }
 
   &__price-value {
