@@ -1,11 +1,13 @@
 @use '../utils/mixins' as *;
 
 .creative-wrapper {
-  @include media(lg) {
-    margin-bottom: 60px;
-  }
+  &:not(:last-child) {
+    @include media(lg) {
+      margin-bottom: 60px;
+    }
 
-  margin-bottom: 100px;
+    margin-bottom: 100px;
+  }
 
   &--no-margin {
     margin-bottom: 0;
