@@ -30,8 +30,10 @@ class Modal {
   }
 }
 
-const reserveModal = new Modal('[data-modal="reserve"]', '[data-modal-el="reserve"]');
-reserveModal.listener();
+const modal = document.querySelectorAll('[data-modal]');
+modal.forEach((elem) => {
+  const val = elem.dataset.modal;
 
-const jobsModal = new Modal('[data-modal="jobs"]', '[data-modal-el="jobs"]');
-jobsModal.listener();
+  const modalInstance = new Modal(`[data-modal="${val}"]`, `[data-modal-el="${val}"]`);
+  modalInstance.listener();
+});

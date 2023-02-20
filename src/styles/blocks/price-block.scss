@@ -1,0 +1,106 @@
+@use '../utils/mixins' as *;
+
+.price-block {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: space-between;
+
+  padding: 40px;
+
+  color: var(--white);
+
+  background: var(--red-accent);
+  border-radius: 16px;
+
+  &__col {
+    &--left {
+      @include media(md, min-width) {
+        grid-column: span 5;
+      }
+    }
+
+    &--right {
+      @include media(md, min-width) {
+        grid-column: 7 / 13;
+      }
+    }
+  }
+
+  &__title {
+    @include media(md) {
+      margin-bottom: 8px;
+      font-size: rem(40px);
+    }
+
+    margin-bottom: 12px;
+    font-family: var(--font-secondary);
+    font-size: rem(60px);
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    font-size: rem(20px);
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  &__price {
+    @include media(md) {
+      margin-top: 28px;
+    }
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 33px;
+  }
+
+  &__price-heading {
+    font-size: rem(20px);
+    line-height: 150%;
+  }
+
+  &__price-value {
+    @include media(md) {
+      font-size: rem(40px);
+    }
+
+    font-family: var(--font-secondary);
+    font-size: rem(60px);
+    line-height: 105%;
+  }
+
+  &__games-title {
+    margin-bottom: 12px;
+    line-height: 150%;
+    opacity: 0.6;
+  }
+}
+
+.price-games-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  &__item {
+    @include media(md) {
+      font-size: rem(18px);
+      font-weight: 300;
+    }
+
+    font-size: rem(20px);
+
+    &::after {
+      content: '•';
+      margin-left: 6px;
+    }
+  }
+}

@@ -1,6 +1,13 @@
 @use '../utils/mixins' as *;
 
 .vacancy-accordion {
+  &__col {
+    .manager {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+
   &__arrow {
     @include media(md) {
       width: 30px;
@@ -14,6 +21,7 @@
     }
 
     overflow: hidden;
+    overflow: clip;
     display: flex;
     flex: none;
     align-items: center;
@@ -39,6 +47,7 @@
     }
 
     overflow: hidden;
+    overflow: clip;
 
     margin-bottom: 24px;
 
@@ -118,8 +127,12 @@
 
   &__content-wrapper {
     overflow: hidden;
+    overflow: clip;
+
     height: 0;
+
     visibility: hidden;
+
     transition: 0.5s;
 
     &.active {

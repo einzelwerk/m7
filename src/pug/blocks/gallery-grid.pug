@@ -18,6 +18,7 @@ section.section.container
           picture.gallery-founder__col.gallery-founder__col--image 
             img(src=require(`@/images/gallery-grid/${val}.jpg`), alt="")
       else                        
-        .gallery-grid__item 
-          picture.gallery-grid__image 
-            img(src=require(`@/images/gallery-grid/${val}.jpg`), alt="")    
+        .gallery-grid__item
+          a.gallery-grid__lightbox-link(href=require(`@/images/gallery-grid/${val}.jpg`) data-glightbox) 
+            picture.gallery-grid__image 
+              img(src=require(`@/images/gallery-grid/${val}.jpg`), alt="")    

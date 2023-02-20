@@ -20,6 +20,10 @@
     justify-content: center;
 
     svg {
+      @include media(md) {
+        margin-left: 12px;
+      }
+
       margin-left: 20px;
     }
   }

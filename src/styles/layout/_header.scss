@@ -6,11 +6,26 @@
   z-index: 1010;
   top: 0;
   left: 0;
+  transform: translateY(0%);
 
   width: 100%;
   padding: 27px 0;
 
   color: var(--white);
+
+  transition: 0.5s;
+
+  &--hidden {
+    transform: translateY(-100%);
+    transition: 0.5s;
+  }
+
+  &--fixed {
+    position: fixed;
+    padding: 15px 0;
+    background: rgb(29 29 27 / 84%);
+    backdrop-filter: blur(8px);
+  }
 
   &__inner {
     display: flex;

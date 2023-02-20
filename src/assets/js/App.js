@@ -6,3 +6,4 @@ import './LangSwitcher';
 import './Accordion';
 import './AttachedFiles';
 import './Modal';
+import './FixedHeader';

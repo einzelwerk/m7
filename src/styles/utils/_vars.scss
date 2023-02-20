@@ -7,7 +7,7 @@
   --gap-y-m: 60px;
   --gap-y-l: 100px;
   --gap-y-xl: 120px;
-  --font-secondary: 'DegularDisplay';
+  --font-secondary: 'DegularDisplay', 'Arimo';
   @each $breakpoint, $val in $breakpoints {
     @include media($breakpoint) {
       @if $val == 1440px {

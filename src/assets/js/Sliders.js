@@ -115,7 +115,8 @@ class Sliders {
       init: false,
       slidesPerView: 1,
       spaceBetween: 20,
-      speed: 1200,
+      speed: 200,
+      loop: true,
       fadeEffect: {
         crossFade: true,
       },
@@ -204,11 +205,17 @@ class Sliders {
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 1200,
+      loop: true,
 
       navigation: {
         nextEl: document.querySelector('.gallery-slider-nav-next'),
         prevEl: document.querySelector('.gallery-slider-nav-prev'),
         disabledClass: 'slider-navigation__item--disabled',
+      },
+      breakpoints: {
+        1024: {
+          allowTouchMove: false,
+        },
       },
     });
     const sliderSecondary = new Swiper('.gallery-secondary', {
@@ -230,9 +237,17 @@ class Sliders {
         bulletActiveClass: 'slider-pagination__item--active',
       },
 
+      on: {
+        slideChange: (slider) => {
+          document.querySelector('.gallery-secondary .slider-counter__current').innerHTML =
+            slider.activeIndex < 10 ? `0${slider.activeIndex + 1}` : slider.activeIndex + 1;
+        },
+      },
+
       breakpoints: {
         1024: {
           pagination: false,
+          allowTouchMove: false,
         },
       },
     });
