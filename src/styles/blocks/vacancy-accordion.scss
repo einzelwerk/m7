@@ -94,9 +94,11 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    margin-bottom: 21px;
+
     font-family: var(--font-secondary);
     font-size: rem(60px);
-    line-height: 150%;
+    line-height: 105%;
   }
 
   &__date {

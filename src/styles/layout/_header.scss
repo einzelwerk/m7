@@ -63,7 +63,11 @@
   }
 
   &__menu-btn {
-    padding: 8px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 12px;
 
     font-weight: 500;
     line-height: 150%;

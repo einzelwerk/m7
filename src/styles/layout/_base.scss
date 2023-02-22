@@ -37,6 +37,12 @@ body {
 .main {
   overflow: hidden;
   overflow: clip;
+
+  &--single {
+    padding-top: var(--header-height);
+    color: var(--white);
+    background: var(--background-secondary);
+  }
 }
 
 .oh {

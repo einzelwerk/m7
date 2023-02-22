@@ -7,3 +7,4 @@ import './Accordion';
 import './AttachedFiles';
 import './Modal';
 import './FixedHeader';
+import './Init';

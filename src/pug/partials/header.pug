@@ -19,7 +19,9 @@ header.header
           a.lang-switcher__link(rel="alternate" href="/ru" hrefLang="ru") Ru
     button.header__btn.btn.btn--primary(type="button" data-modal="reserve")
       span.btn__inner Eventanfrage
-    button.header__menu-btn.hidden-desktop.js-open-nav(type="button") Menu
+    button.header__menu-btn.hidden-desktop.js-open-nav(type="button")
+      svg(width="24" height="24")
+        use(xlink:href="sprite.svg#menu-open_sprite") 
 #nav.mobile-nav-wrapper(aria-hidden="true")
   .mobile-nav-wrapper__header.header
     .header__inner.container
@@ -28,7 +30,9 @@ header.header
           img.logo__image(src=require('@/images/logo.svg'), alt="")
       button.header__btn.btn.btn--primary(type="button" data-modal="reserve")
         span.btn__inner Eventanfrage
-      button.header__menu-btn.mobile-nav-wrapper__close(type="button") Close
+      button.header__menu-btn.mobile-nav-wrapper__close(type="button")
+        svg(width="24" height="24")
+          use(xlink:href="sprite.svg#close-menu_sprite") 
   nav.mobile-nav.hidden-desktop.container
     ul.mobile-nav__list 
       each val,index in menu 
