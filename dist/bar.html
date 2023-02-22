@@ -35,7 +35,11 @@
       </ul>
     </nav>
     <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
-    <button class="header__menu-btn hidden-desktop js-open-nav" type="button">Menu</button>
+    <button class="header__menu-btn hidden-desktop js-open-nav" type="button">
+      <svg width="24" height="24">
+        <use xlink:href="sprite.svg#menu-open_sprite"> </use>
+      </svg>
+    </button>
   </div>
 </header>
 <div class="mobile-nav-wrapper" id="nav" aria-hidden="true">
@@ -43,7 +47,11 @@
     <div class="header__inner container">
       <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__image" src="assets/images/logo.svg" alt=""></a></div>
       <button class="header__btn btn btn--primary" type="button" data-modal="reserve"><span class="btn__inner">Eventanfrage</span></button>
-      <button class="header__menu-btn mobile-nav-wrapper__close" type="button">Close</button>
+      <button class="header__menu-btn mobile-nav-wrapper__close" type="button">
+        <svg width="24" height="24">
+          <use xlink:href="sprite.svg#close-menu_sprite"> </use>
+        </svg>
+      </button>
     </div>
   </div>
   <nav class="mobile-nav hidden-desktop container">
@@ -467,5 +475,15 @@
     </p>
   </div>
 </div>
+    <aside class="feedback-sidebar">
+      <ul class="feedback-sidebar__list"> 
+        <li class="feedback-sidebar__item"><a class="feedback-sidebar__link" href="tel:" target="_blank"><img class="feedback-sidebar__icon" src="assets/images/phone.svg" alt=""></a></li>
+        <li class="feedback-sidebar__item"><a class="feedback-sidebar__link" href="tel:" target="_blank"><img class="feedback-sidebar__icon" src="assets/images/mail.svg" alt=""></a></li>
+        <li class="feedback-sidebar__item"><a class="feedback-sidebar__link" href="tel:" target="_blank"><img class="feedback-sidebar__icon" src="assets/images/wa.svg" alt=""></a></li>
+        <li class="feedback-sidebar__item">
+          <button class="feedback-sidebar__link" type="button" data-modal="reserve"><img class="feedback-sidebar__icon" src="assets/images/calendar.svg" alt=""></button>
+        </li>
+      </ul>
+    </aside>
   </body>
 </html>
