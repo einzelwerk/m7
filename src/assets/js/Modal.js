@@ -40,4 +40,3 @@ modal.forEach((elem) => {
 
 const thankyouModal = new Modal(null, '[data-modal-el="thank-you"]');
 thankyouModal.listener();
-thankyouModal.open();
