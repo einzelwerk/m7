@@ -4,7 +4,7 @@ class Modal {
   constructor(trigger, modal) {
     this.modal = modal;
     this.trigger = trigger;
-    this.closeBtn = '.modal__close';
+    this.closeBtn = '.js-modal-close';
     this.state = false;
   }
 
@@ -37,3 +37,7 @@ modal.forEach((elem) => {
   const modalInstance = new Modal(`[data-modal="${val}"]`, `[data-modal-el="${val}"]`);
   modalInstance.listener();
 });
+
+const thankyouModal = new Modal(null, '[data-modal-el="thank-you"]');
+thankyouModal.listener();
+thankyouModal.open();

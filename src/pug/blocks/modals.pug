@@ -1,6 +1,6 @@
 .modal-wrapper(data-modal-el="reserve")
   .modal
-    button.modal__close(type="button")
+    button.modal__close.js-modal-close(type="button")
       svg(width="20" height="20")
         use(xlink:href="sprite.svg#close_sprite") 
     h3.modal__title  Buchen Sie unsere moderne und gepflegte Kegelbahn Anlage
@@ -37,7 +37,7 @@
           span.btn__inner Anfrage absenden
 .modal-wrapper(data-modal-el="jobs")
   .modal
-    button.modal__close(type="button")
+    button.modal__close.js-modal-close(type="button")
       svg(width="20" height="20")
         use(xlink:href="sprite.svg#close_sprite") 
     h3.modal__title  Jetzt Teil unseres Teams werden
@@ -79,3 +79,13 @@
               label.checkbox__label(for="feedback-form-modal-jobs-checkbox")  einverstanden
           button.feedback-form__submit.btn.btn--primary(type="submit")
             span.btn__inner Anfrage absenden
+.modal-wrapper(data-modal-el="thank-you")
+  .modal.modal--thank-you
+    button.modal__close.js-modal-close(type="button")
+      svg(width="20" height="20")
+        use(xlink:href="sprite.svg#close_sprite")
+    h3.modal__title.modal__title--big
+      span Vielen Dank für Ihre Anfrage!
+    p.modal__desc.modal__desc--center Wir setzen uns mit Ihnen so schnell wie möglich in Verbindung.
+    button.btn.btn--secondary.modal__btn.js-modal-close(type="button")
+      span.btn__inner Alles klar
