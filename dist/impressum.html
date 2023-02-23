@@ -165,7 +165,7 @@
 </footer>
 <div class="modal-wrapper" data-modal-el="reserve">
   <div class="modal">
-    <button class="modal__close" type="button">
+    <button class="modal__close js-modal-close" type="button">
       <svg width="20" height="20">
         <use xlink:href="sprite.svg#close_sprite"> </use>
       </svg>
@@ -215,7 +215,7 @@
 </div>
 <div class="modal-wrapper" data-modal-el="jobs">
   <div class="modal">
-    <button class="modal__close" type="button">
+    <button class="modal__close js-modal-close" type="button">
       <svg width="20" height="20">
         <use xlink:href="sprite.svg#close_sprite"> </use>
       </svg>
@@ -266,6 +266,18 @@
         </form>
       </div>
     </p>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="thank-you">
+  <div class="modal modal--thank-you">
+    <button class="modal__close js-modal-close" type="button">
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#close_sprite"></use>
+      </svg>
+    </button>
+    <h3 class="modal__title modal__title--big"><span>Vielen Dank für Ihre Anfrage!</span></h3>
+    <p class="modal__desc modal__desc--center">Wir setzen uns mit Ihnen so schnell wie möglich in Verbindung.</p>
+    <button class="btn btn--secondary modal__btn js-modal-close" type="button"><span class="btn__inner">Alles klar</span></button>
   </div>
 </div>
     <aside class="feedback-sidebar">
