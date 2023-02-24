@@ -10,7 +10,7 @@
 
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 20px;
+  gap: 80px;
   justify-content: space-between;
 
   &__title {
@@ -87,21 +87,40 @@
     }
 
     display: grid;
-    grid-template-columns: 1fr 15% max-content;
+    grid-template-columns: max-content max-content;
     gap: 80px;
     align-items: flex-end;
     justify-content: space-between;
 
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 52px;
+  }
+}
+
+.footer-bottom {
+  @include media(sm) {
+    flex-direction: row-reverse;
   }
 
-  &__policy {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.footer-policy {
+  @include media(sm) {
+    flex-direction: column;
   }
 
-  &__policy-link {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    @include media(sm) {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
     margin-right: 40px;
     opacity: 0.6;
     transition: opacity 0.5s;
