@@ -41,8 +41,12 @@
 
   p {
     margin-bottom: 0.5rem;
+
+    font-size: rem(20px);
     font-weight: 300;
-    line-height: 125%;
+    line-height: 150%;
+
+    opacity: 0.4;
   }
 
   img {
