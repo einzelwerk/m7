@@ -40,3 +40,11 @@ modal.forEach((elem) => {
 
 const thankyouModal = new Modal(null, '[data-modal-el="thank-you"]');
 thankyouModal.listener();
+
+document.addEventListener(
+  'wpcf7mailsent',
+  () => {
+    thankyouModal.open();
+  },
+  false
+);
