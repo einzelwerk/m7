@@ -31,21 +31,20 @@ class Modal {
 }
 
 const modal = document.querySelectorAll('[data-modal]');
+const thankyouModal = new Modal(null, '[data-modal-el="thank-you"]');
+thankyouModal.listener();
+
 modal.forEach((elem) => {
   const val = elem.dataset.modal;
 
   const modalInstance = new Modal(`[data-modal="${val}"]`, `[data-modal-el="${val}"]`);
   modalInstance.listener();
+  document.addEventListener(
+    'wpcf7mailsent',
+    () => {
+      modalInstance.close();
+      thankyouModal.open();
+    },
+    false
+  );
 });
-
-const thankyouModal = new Modal(null, '[data-modal-el="thank-you"]');
-thankyouModal.listener();
-
-document.addEventListener(
-  'wpcf7mailsent',
-  () => {
-    Modal.close();
-    thankyouModal.open();
-  },
-  false
-);
