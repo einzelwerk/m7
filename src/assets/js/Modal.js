@@ -44,6 +44,7 @@ thankyouModal.listener();
 document.addEventListener(
   'wpcf7mailsent',
   () => {
+    Modal.close();
     thankyouModal.open();
   },
   false
