@@ -1,7 +1,7 @@
 @use '../utils/mixins' as *;
 
 .features-kegel {
-  @include media(md) {
+  @include media(xl) {
     grid-template-columns: 1fr;
   }
   @include media(md) {
