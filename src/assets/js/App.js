@@ -4,7 +4,8 @@ import './PlayVideo';
 import './Lightbox';
 import './LangSwitcher';
 import './Accordion';
-import './AttachedFiles';
+
 import './Modal';
 import './FixedHeader';
 import './Init';
+import './AttachedFiles';

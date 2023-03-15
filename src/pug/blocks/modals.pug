@@ -60,9 +60,18 @@
             .feedback-form__item 
               input#feedback-form-modal-jobs-count.feedback-form__input(type="text" placeholder=" ")
               label.feedback-form__label(for="feedback-form-modal-jobs-count") Anzahl der Personen*
-            .feedback-form__item 
-              input#feedback-form-modal-jobs-file.feedback-form__input.feedback-form__input--file.js-attached-files(type="file"  multiple)
+            .feedback-form__item.js-attached-files
+              input#feedback-form-modal-jobs-file.feedback-form__input.feedback-form__input--file(type="file"  multiple)
               label.feedback-form__label-file(for="feedback-form-modal-jobs-file")
+                span.feedback-form__label-file-text Lebenslauf*
+                span.feedback-form__file-placeholder
+                  svg.feedback-form__clip-icon(width="18" height="18")
+                    use(xlink:href="sprite.svg#clip_sprite")
+              span.attached-files-area 
+                span.attached-files
+            .feedback-form__item.js-attached-files
+              input#feedback-form-modal-jobs-file-2.feedback-form__input.feedback-form__input--file(type="file"  multiple)
+              label.feedback-form__label-file(for="feedback-form-modal-jobs-file-2")
                 span.feedback-form__label-file-text Lebenslauf*
                 span.feedback-form__file-placeholder
                   svg.feedback-form__clip-icon(width="18" height="18")
