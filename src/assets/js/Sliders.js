@@ -237,6 +237,15 @@ class Sliders {
           pagination: {
             el: document.querySelector('.gallery-secondary')?.querySelector('.desktop-slider-pagination'),
             type: 'fraction',
+            formatFractionCurrent(number) {
+              return `0${number}`.slice(-2);
+            },
+            formatFractionTotal(number) {
+              return `0${number}`.slice(-2);
+            },
+            renderFraction(currentClass, totalClass) {
+              return `<span class="${currentClass}"></span> /<span class="${totalClass}"></span>`;
+            },
           },
         },
       },
