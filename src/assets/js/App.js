@@ -9,3 +9,4 @@ import './Modal';
 import './FixedHeader';
 import './Init';
 import './AttachedFiles';
+import './CustomCursor';
