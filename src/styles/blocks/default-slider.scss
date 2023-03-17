@@ -20,6 +20,10 @@
   }
 
   &__image {
+    @include media(md) {
+      height: 260px;
+    }
+
     overflow: hidden;
     border-radius: 12px;
 
