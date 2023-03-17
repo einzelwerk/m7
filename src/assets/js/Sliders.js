@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import Swiper, { Navigation, EffectFade, Thumbs, FreeMode, Pagination } from 'swiper';
+import Swiper, { Navigation, EffectFade, Thumbs, FreeMode, Pagination, Controller } from 'swiper';
 import 'swiper/scss';
+import 'swiper/scss/controller';
 import 'swiper/scss/thumbs';
 import 'swiper/scss/free-mode';
 import 'swiper/scss/effect-fade';
@@ -198,9 +199,54 @@ class Sliders {
   }
 
   static galleryPrimarySlider() {
-    const sliderPrimary = new Swiper('.gallery-primary', {
-      modules: [Navigation],
+    const sliderTitles = new Swiper('.gallery-secondary__title', {
+      modules: [Navigation, EffectFade],
 
+      init: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+      loop: true,
+
+      effect: 'fade',
+
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+    const sliderSecondary = new Swiper('.gallery-secondary', {
+      modules: [Navigation, Pagination, Controller],
+
+      init: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+      loop: true,
+      controller: {
+        control: [sliderTitles],
+      },
+      pagination: {
+        el: document.querySelector('.gallery-secondary')?.querySelector('.slider-pagination'),
+        bulletClass: 'slider-pagination__item',
+
+        bulletActiveClass: 'slider-pagination__item--active',
+      },
+
+      breakpoints: {
+        1024: {
+          pagination: {
+            el: document.querySelector('.gallery-secondary')?.querySelector('.desktop-slider-pagination'),
+            type: 'fraction',
+          },
+        },
+      },
+    });
+
+    const sliderPrimary = new Swiper('.gallery-primary', {
+      modules: [Navigation, Controller],
+      controller: {
+        control: [sliderSecondary],
+      },
       init: false,
       slidesPerView: 1,
       spaceBetween: 0,
@@ -212,68 +258,11 @@ class Sliders {
         prevEl: document.querySelector('.gallery-slider-nav-prev'),
         disabledClass: 'slider-navigation__item--disabled',
       },
-      breakpoints: {
-        1024: {
-          allowTouchMove: false,
-        },
-      },
     });
-    const sliderSecondary = new Swiper('.gallery-secondary', {
-      modules: [Navigation, Pagination],
-
-      init: false,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      speed: 600,
-
-      navigation: {
-        nextEl: document.querySelector('.gallery-slider-nav-next'),
-        prevEl: document.querySelector('.gallery-slider-nav-prev'),
-        disabledClass: 'slider-navigation__item--disabled',
-      },
-      pagination: {
-        el: document.querySelector('.gallery-secondary')?.querySelector('.slider-pagination'),
-        bulletClass: 'slider-pagination__item',
-        bulletActiveClass: 'slider-pagination__item--active',
-      },
-
-      on: {
-        slideChange: (slider) => {
-          document.querySelector('.gallery-secondary .slider-counter__current').innerHTML =
-            slider.activeIndex < 10 ? `0${slider.activeIndex + 1}` : slider.activeIndex + 1;
-        },
-      },
-
-      breakpoints: {
-        1024: {
-          pagination: false,
-          allowTouchMove: false,
-        },
-      },
-    });
-    const sliderTitles = new Swiper('.gallery-secondary__title', {
-      modules: [Navigation, EffectFade],
-
-      init: false,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      speed: 600,
-      allowTouchMove: false,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
-
-      navigation: {
-        nextEl: document.querySelector('.gallery-slider-nav-next'),
-        prevEl: document.querySelector('.gallery-slider-nav-prev'),
-        disabledClass: 'slider-navigation__item--disabled',
-      },
-    });
-
-    sliderSecondary.init();
-    sliderPrimary.init();
     sliderTitles.init();
+    sliderSecondary.init();
+
+    sliderPrimary.init();
   }
 
   static videoSlider() {
