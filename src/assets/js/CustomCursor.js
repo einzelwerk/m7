@@ -50,8 +50,12 @@ class CustomCursor {
       this.moveCursor(e);
     });
 
+    window.addEventListener('scroll', () => {
+      this.hideCursor();
+    });
+
     document.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.swiper:not(.features-events)')) {
+      if (e.target.closest('.swiper.services, .swiper.menu')) {
         this.showCursor();
         this.setText('Ziehen');
       } else {
